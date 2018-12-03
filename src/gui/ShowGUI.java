@@ -9,7 +9,6 @@ import org.newdawn.slick.state.StateBasedGame;
 import java.io.File;
 
 public class ShowGUI extends StateBasedGame {
-
     //Windows Size
     protected static int width 	= 1600;
     protected static int height 	= 900;
@@ -63,5 +62,8 @@ public class ShowGUI extends StateBasedGame {
     @Override
     public void initStatesList(GameContainer gameContainer) throws SlickException {
 
+    }
+    public static boolean isAA() {
+        return AA;
     }
 }
