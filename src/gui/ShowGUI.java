@@ -62,6 +62,6 @@ public class ShowGUI extends StateBasedGame {
 
     @Override
     public void initStatesList(GameContainer gameContainer) throws SlickException {
-
+        this.addState(new MaleZombie());
     }
 }
