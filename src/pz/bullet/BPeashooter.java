@@ -8,7 +8,8 @@ import com.Position;
 
 import pz.Bullet;
 import pz.Zombie;
-import pz.zombie.NhiZombie;
+import pz.zombie.MaleZombie;
+
 
 /**
  * 
@@ -64,7 +65,7 @@ public class BPeashooter extends pz.Bullet {
 			//if (z == null) continue;
 			if (Position.isIntersect(this, z)) {
 				z.setHp(z.getHp() - getDamage());
-				if (z instanceof NhiZombie)
+				if (z instanceof MaleZombie)
 					z.setDamage(getDamage() + 10);
 				//System.out.println("hit");
 				bulletList.remove(this);

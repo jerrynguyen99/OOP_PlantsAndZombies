@@ -10,7 +10,7 @@ import gui.PZGUI;
 
 /**
  * 
- * @author Nguyen Phan Hung Thuan
+ * @author Tran To Que Phuong
  *
  */
 public abstract class Bullet {

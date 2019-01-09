@@ -5,7 +5,7 @@ import org.newdawn.slick.SlickException;
 
 /**
  * 
- * @author Nguyen Phan Hung Thuan
+ * @author Tran To Que Phuong
  *
  */
 public class Seed {

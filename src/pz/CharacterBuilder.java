@@ -8,11 +8,7 @@ import com.Position;
 import gui.PZGUI;
 import gui.PlayUI;
 
-/**
- * 
- * @author Nguyen Phan Hung Thuan
- *
- */
+
 public class CharacterBuilder {
 
 	@SuppressWarnings("rawtypes")

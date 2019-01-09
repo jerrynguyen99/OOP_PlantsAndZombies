@@ -9,9 +9,9 @@ import pz.CharacterBuilder;
 import pz.Plant;
 import pz.Zombie;
 import pz.plant.*;
-import pz.zombie.FemaleZombie;
+import pz.zombie.CrazyZombie;
 import pz.zombie.MaleZombie;
-import pz.zombie.NhiZombie;
+
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
@@ -45,7 +45,6 @@ public class Play extends BasicGameState {
 		SeedUI.addSeed(Peashooter2.class, 250);
 		SeedUI.addSeed(Wallnut.    class, 50);
 		SeedUI.addSeed(Torchwood.  class, 300);
-		SeedUI.addSeed(Bloomerang. class, 300);	
 	}
 
 	/**
@@ -233,7 +232,7 @@ public class Play extends BasicGameState {
 		int row = ThreadLocalRandom.current().nextInt(0, coefficient);
 		int zombieN;
 		@SuppressWarnings("rawtypes")
-		Class[] zombieClass = {FemaleZombie.class, MaleZombie.class, NhiZombie.class};
+		Class[] zombieClass = { MaleZombie.class, CrazyZombie.class};
 		if (row>=0 && row<=4) {
 			zombieN = ThreadLocalRandom.current().nextInt(0, zombieClass.length);
 			zombie.add(CharacterBuilder.buildZombie(zombieClass[zombieN], row));

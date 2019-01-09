@@ -10,9 +10,10 @@ import org.newdawn.slick.SlickException;
 
 import pz.CharacterBuilder;
 import pz.plant.*;
-import pz.zombie.FemaleZombie;
+import pz.zombie.CrazyZombie;
+
 import pz.zombie.MaleZombie;
-import pz.zombie.NhiZombie;
+
 
 public class AnimationLoader {
 
@@ -29,11 +30,10 @@ public class AnimationLoader {
 		CharacterBuilder.buildPlant(Sunflower.	  class, null);
 		CharacterBuilder.buildPlant(Torchwood.	  class, null);
 		CharacterBuilder.buildPlant(Wallnut.	  class, null);
-		CharacterBuilder.buildPlant(Bloomerang.	  class, null);
+
 		
 		CharacterBuilder.buildZombie(MaleZombie.  class, null);
-		CharacterBuilder.buildZombie(FemaleZombie.class, null);
-		CharacterBuilder.buildZombie(NhiZombie.	  class, null);
+		CharacterBuilder.buildZombie(CrazyZombie.class, null);
 		
 		//loadResources("res"); /
 	}
