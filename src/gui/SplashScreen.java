@@ -29,12 +29,13 @@ public class SplashScreen extends BasicGameState {
 	private float edgeY;
 	private float width;
 	private float height;
+	SSound sSound = new SSound("res/Sound/sound/Intro.ogg");
 	/**
 	 * Create splash screen
 	 * @param state	State index
 	 */
 	public SplashScreen(int state) {
-		SSound.play("res/Sound/sound/Intro.ogg", true, 1f, 1f);
+		sSound.play(true, 1f, 1f);
 	}
 	
 	// Initialization
@@ -80,8 +81,10 @@ public class SplashScreen extends BasicGameState {
 				PZGUI.getHeight() - Mouse.getY() <= edgeY) {
 			playButton.draw(posX, posY, width, height, new Color(100, 100, 100, 60));
 			
-			if (Mouse.isButtonDown(0))
+			if (Mouse.isButtonDown(0)) {
 				stateBasedGame.enterState(1);
+				sSound.stop();
+			}
 		}
 	}
 
