@@ -84,7 +84,8 @@ public class Play extends BasicGameState {
 		
 		PlayUI.showSunCollected (gc, sbg, g);
 		PlayUI.showPauseButton  (gc, g);
-		PlayUI.showSpeedUpButton(gc, g);
+		//PlayUI.showSpeedUpButton(gc, g);
+		PlayUI.showExitGameButton(gc, g);
 		PlayUI.showPlayButton   (gc, g);
 		PlayUI.showShovel       (gc, g);
 		
@@ -155,7 +156,7 @@ public class Play extends BasicGameState {
 		}
 	}
 	
-	private static void drawAllBullet(ArrayList<Bullet> bulletList, boolean isPausing) {
+	private static void drawAllBullet (ArrayList<Bullet> bulletList, boolean isPausing) throws SlickException {
 		for (Bullet iBullet : bulletList) {
 			iBullet.draw( !isPausing );
 		}

@@ -1,16 +1,11 @@
 package gui;
 
-import java.util.concurrent.TimeUnit;
-
+import com.Controller;
 import org.lwjgl.input.Mouse;
-import org.newdawn.slick.Color;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
 import org.newdawn.slick.state.StateBasedGame;
 
-import com.Controller;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 
@@ -21,13 +16,15 @@ public class PlayUI {
 
 	private static Image pauseButton;
 	private static Image playButton;
-	private static Image speedUpButton;
+	private static Image exitGameButton;
+	//private static Image speedUpButton;
+
 	private static Image shovel;
 	
 	private static Text sunView = new Text(35.0f);
 	private static Text gamePausedText = new Text(70.0f);
 	
-	private static boolean isSpeedUpClicked = false;
+	//private static boolean isSpeedUpClicked = false;
 	private static boolean isShovelClicked = false;
 
 	private static float plantZonePosX = 432 * PZGUI.getResolutionRateWidth();
@@ -40,15 +37,20 @@ public class PlayUI {
 	private static float seedZoneW = 140 * PZGUI.getResolutionRateWidth();
 	private static float seedZoneH = 90  * PZGUI.getResolutionRateHeight();
 
-	private static float pauseButtonPosX   = 1530 * PZGUI.getResolutionRateWidth();
+	private static float pauseButtonPosX   = 1400 * PZGUI.getResolutionRateWidth();
 	private static float pauseButtonPosY   = 10   * PZGUI.getResolutionRateHeight();
 	private static float pauseButtonWidth  = 60   * PZGUI.getResolutionRateWidth();
 	private static float pauseButtonHeight = 60   * PZGUI.getResolutionRateHeight();
 
-	private static float speedUpButtonPosX   = 1460 * PZGUI.getResolutionRateWidth();
-	private static float speedUpButtonPosY   = 10   * PZGUI.getResolutionRateHeight();
-	private static float speedUpButtonWidth  = 60   * PZGUI.getResolutionRateWidth();
-	private static float speedUpButtonHeight = 60   * PZGUI.getResolutionRateHeight();
+	private static float exitGameButtonPosX   = 1460 * PZGUI.getResolutionRateWidth();;
+	private static float exitGameButtonPosY   = 10 * PZGUI.getResolutionRateHeight();
+	private static float exitGameButtonWidth  = 120   * PZGUI.getResolutionRateWidth();
+	private static float exitGameButtonHeight = 60  * PZGUI.getResolutionRateHeight();
+
+	//private static float speedUpButtonPosX   = 1460 * PZGUI.getResolutionRateWidth();
+	//private static float speedUpButtonPosY   = 10   * PZGUI.getResolutionRateHeight();
+	//private static float speedUpButtonWidth  = 60   * PZGUI.getResolutionRateWidth();
+	//private static float speedUpButtonHeight = 60   * PZGUI.getResolutionRateHeight();
 
 	private static float shovelButtonPosX    = 1500   * PZGUI.getResolutionRateWidth();
 	private static float shovelButtonPosY    = 800    * PZGUI.getResolutionRateHeight();
@@ -73,7 +75,8 @@ public class PlayUI {
 	public static void init() throws SlickException {
 		pauseButton   = new Image("res/UI/pause.png");
 		playButton    = new Image("res/UI/play.png");
-		speedUpButton = new Image("res/UI/speedUp.png");
+	//	speedUpButton = new Image("res/UI/speedUp.png");
+		exitGameButton = new Image("res/UI/GOver_ExitGame_Button.png");
 		shovel 		  = new Image("res/UI/Shovel.png");
 	}
 
@@ -172,25 +175,15 @@ public class PlayUI {
 			}
 		}
 	}
-	
-	// Speed Up button
-	/**
-	 * Show speedUp button
-	 * @param gc	GameContainer
-	 * @param g	Graphics
-	 * @throws SlickException
-	 */
-	public static void showSpeedUpButton(GameContainer gc, Graphics g) throws SlickException {
-		speedUpButton.draw(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonWidth, speedUpButtonHeight);
-		
-		if (Controller.mouseInArea(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonPosX + speedUpButtonWidth,
-									speedUpButtonPosY + speedUpButtonHeight)) {
-			speedUpButton.draw(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonWidth, speedUpButtonHeight,
-								new Color(0, 0, 0, 50));
+
+	public static void showExitGameButton(GameContainer gc, Graphics g) throws SlickException {
+
+		exitGameButton.draw(exitGameButtonPosX, exitGameButtonPosY, exitGameButtonWidth, exitGameButtonHeight);
+
+		if (Controller.mouseInArea(exitGameButtonPosX, exitGameButtonPosY, exitGameButtonPosX + exitGameButtonWidth, exitGameButtonPosY + exitGameButtonHeight)) {
+			exitGameButton.draw(exitGameButtonPosX, exitGameButtonPosY, exitGameButtonWidth, exitGameButtonHeight, new Color(0, 0, 0, 100));
 			if (Mouse.getEventButtonState() && Mouse.getEventButton() == 0) {
-				gc.setTargetFrameRate(isSpeedUpClicked==false?180:60);
-				gc.setVSync(isSpeedUpClicked);
-				isSpeedUpClicked = !isSpeedUpClicked;
+				gc.exit();
 				try {
 					TimeUnit.MILLISECONDS.sleep(100);
 				} catch (InterruptedException e) {
@@ -198,11 +191,38 @@ public class PlayUI {
 				}
 			}
 		}
-		if (isSpeedUpClicked == false) {
-			speedUpButton.draw(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonWidth, speedUpButtonHeight, new Color(0, 0, 0, 100));
-		}
-		
 	}
+	// Speed Up button
+	/**
+	 * Show speedUp button
+	 * @param gc	GameContainer
+	 * @param g	Graphics
+	 * @throws SlickException
+	 */
+	//public static void showSpeedUpButton(GameContainer gc, Graphics g) throws SlickException {
+	//	speedUpButton.draw(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonWidth, speedUpButtonHeight);
+
+	//	if (Controller.mouseInArea(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonPosX + speedUpButtonWidth,
+	//								speedUpButtonPosY + speedUpButtonHeight)) {
+	//		speedUpButton.draw(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonWidth, speedUpButtonHeight,
+	//							new Color(0, 0, 0, 50));
+	//		if (Mouse.getEventButtonState() && Mouse.getEventButton() == 0) {
+	//			gc.setTargetFrameRate(isSpeedUpClicked==false?180:60);
+	//			gc.setVSync(isSpeedUpClicked);
+	//			isSpeedUpClicked = !isSpeedUpClicked;
+	//			try {
+	//				TimeUnit.MILLISECONDS.sleep(100);
+	//			} catch (InterruptedException e) {
+	//				e.printStackTrace();
+	//			}
+	//		}
+	//	}
+	//	if (isSpeedUpClicked == false) {
+	//		speedUpButton.draw(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonWidth, speedUpButtonHeight, new Color(0, 0, 0, 100));
+	//	}
+
+	//}
+
 	
 	/**
 	 * Show play button
