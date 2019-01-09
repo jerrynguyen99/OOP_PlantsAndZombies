@@ -13,7 +13,11 @@ import pz.plant.*;
 import pz.zombie.FemaleZombie;
 import pz.zombie.MaleZombie;
 import pz.zombie.NhiZombie;
-
+/**
+ *
+ * @author Nguyen Truong Dat & Tran To Que Phuong
+ *
+ */
 public class AnimationLoader {
 
 	public static ArrayList<AnimationItem> aniList = new ArrayList<>();
