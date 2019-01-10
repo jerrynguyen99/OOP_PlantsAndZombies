@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 
- * @author Nguyen Thanh Xuan Tung
+ * @author Tran To Que Phuong
  *
  */
 public class PlayUI {

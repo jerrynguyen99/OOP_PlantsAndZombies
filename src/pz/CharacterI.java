@@ -4,11 +4,7 @@ import org.newdawn.slick.Animation;
 
 import com.Position;
 
-/**
- * 
- * @author Nguyen Phan Hung Thuan
- *
- */
+
 public interface CharacterI {
 	
     Animation getAnimation(); 

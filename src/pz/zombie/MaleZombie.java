@@ -20,11 +20,13 @@ public class MaleZombie extends Zombie {
 	
 	private Animation walkAni;
 	private Animation attackAni;
+	private static  float scaleFactor= 1.3f;
 
 	public MaleZombie(Position pos) {
-		super("MaleZombie", hp, damage, attackInterval, speed, pos);
+		super("MaleZombie", hp, damage, attackInterval, speed, pos, scaleFactor);
 		walkAni = getAnimation();
 		attackAni = AnimationLoader.getAnimationFromFolder("res/ZombieTest/MaleZombie/attack", 110);
+
 	}	
 
 	@Override
@@ -47,6 +49,7 @@ public class MaleZombie extends Zombie {
 						hit = true;
 						setSpeed(0);
 						setAnimation(attackAni);
+						setScaleFactor(0.575f);
 						//setAnimation(AnimationLoader.getAnimationFromFolder("res/ZombieTest/MaleZombie/attack", 110));
 						//System.out.println("touched");
 						if (getFramePassed() >= getAttackInterval()) {
@@ -60,6 +63,7 @@ public class MaleZombie extends Zombie {
 			}
 		}
 		if (hit == false) {
+			setScaleFactor(1.3f);
 			setAnimation(walkAni);
 			setSpeed(speed);
 		}

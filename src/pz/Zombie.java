@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import com.Position;
 import gui.PZGUI;
 
-/**
- * 
- * @author Nguyen Phan Hung Thuan
- *
- */
+
 public abstract class Zombie extends Character {
 	
-	private float scaleFactor = 0.3f;
+	private float scaleFactor = 1.3f;
+
+	public void setScaleFactor (float scaleFactor){
+		this.scaleFactor= scaleFactor;
+	}
 	
 	/**
 	 * Zombie contructor
@@ -22,8 +22,9 @@ public abstract class Zombie extends Character {
 	 * @param attackInterval	attack interval
 	 * @param pos	Position
 	 */
-	public Zombie(String name, int hp, int damage, int attackInterval, float speed, Position pos) {
+	public Zombie(String name, int hp, int damage, int attackInterval, float speed, Position pos, float scaleFactor) {
 		super(name, hp, damage, attackInterval, pos);
+		setScaleFactor(scaleFactor);
 		setSpeed(speed);
 		loadAnimation();
 	}
