@@ -13,8 +13,23 @@ import pz.plant.*;
 import pz.zombie.CrazyZombie;
 
 import pz.zombie.MaleZombie;
+<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
+//=======
+//import pz.zombie.NhiZombie;
+=======
+>>>>>>> 68e2f3a68ef267b0ccd53d36127c95d62b9cb60a
+/**
+ *
+ * @author Nguyen Truong Dat & Tran To Que Phuong
+ *
+ */
+<<<<<<< HEAD
+//>>>>>>> 611a7cd53fa38de587d9751ebe63372d7e4734ed
+=======
+>>>>>>> 68e2f3a68ef267b0ccd53d36127c95d62b9cb60a
 public class AnimationLoader {
 
 	public static ArrayList<AnimationItem> aniList = new ArrayList<>();

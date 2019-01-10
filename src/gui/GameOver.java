@@ -26,7 +26,7 @@ public class GameOver extends BasicGameState {
 		newGameButton = new Image("res/UI/GOver_NewGame_Button.png");
 		exitGameButton = new Image("res/UI/GOver_ExitGame_Button.png");
 	}
-	
+
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
 		showBackground(g);
 		showExitGameButton(gc, g);

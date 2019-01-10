@@ -1,6 +1,8 @@
 package gui;
 
 import com.Controller;
+import com.Position;
+import com.SSound;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
@@ -25,78 +27,99 @@ public class Play extends BasicGameState {
 
 	private static ArrayList<Zombie> zombie 	= new ArrayList<Zombie>();	
 	private static Plant[][] 		  plant 	= new Plant[5][9];
+	private static Chili 			  chili;
+	private static Zombie			  zomb;
 	private static ArrayList<Bullet> bullet 	= new ArrayList<Bullet>();
 	private static Integer timePass = 1;
-	
+	private SSound sSound = new SSound("res/sound/Modern_Day.ogg");
 	private static Image background;
 	
 	public Play(int state) {}
 
 	// Initialization
-	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
+	public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
 		new AnimationLoader();
-		background = new Image("res/Map/Map_1.jpg");
-		
+		background = new Image("res/Map/Map_2.png");
+		sSound.play(true, 1f, 1f);
 		SunUI.init();
 		PlayUI.init();
 		
+<<<<<<< HEAD
+//<<<<<<< HEAD
 		SeedUI.addSeed(Sunflower.  class, 50);
 		SeedUI.addSeed(Peashooter. class, 100);
 		SeedUI.addSeed(Peashooter2.class, 250);
 		SeedUI.addSeed(Wallnut.    class, 50);
 		SeedUI.addSeed(Torchwood.  class, 300);
+//=======
+=======
+>>>>>>> 68e2f3a68ef267b0ccd53d36127c95d62b9cb60a
+		SeedUI.addSeed(Sunflower.class, 50);
+		SeedUI.addSeed(Peashooter.class, 100);
+		SeedUI.addSeed(Peashooter2.class, 200);
+		SeedUI.addSeed(Wallnut.class, 50);
+		SeedUI.addSeed(Torchwood.class, 150);
+<<<<<<< HEAD
+//>>>>>>> 611a7cd53fa38de587d9751ebe63372d7e4734ed
+=======
+//		SeedUI.addSeed(Bloomerang.class, 250);
+>>>>>>> 68e2f3a68ef267b0ccd53d36127c95d62b9cb60a
 	}
 
 	/**
 	 * Draw default background
-	 * @param gc	GameContainer
-	 * @param sbg	StateBasedGame
-	 * @param g	Graphics
+	 * @param gameContainer	GameContainer
+	 * @param stateBasedGame	StateBasedGame
+	 * @param graphics	Graphics
 	 * @throws SlickException	SlickException
 	 */
-	public void showBackground(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-		float rate 		= 0.69f;
+	public void showBackground(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
+		float rate 		= 1.37f;
 		float width 	= background.getWidth() * PZGUI.getResolutionRateWidth() * rate;
 		float height 	= background.getHeight() * PZGUI.getResolutionRateHeight() * rate;
-		float moveLeft  = (float)PZGUI.getWidth() * (7.0f/32);
-		float moveUp 	= (float)PZGUI.getHeight() * (41.0f/180);
+		float moveLeft  = (float)PZGUI.getWidth() * (6.35f/32);
+		float moveUp 	= (float)PZGUI.getHeight() * (30f/180);
 		
 		background.draw(-moveLeft, -moveUp, width, height);
 	}
 
 	// Render
-	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-		showBackground(gc, sbg, g);
-		eventHandle(gc, g);
+	public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
+		showBackground(gameContainer, stateBasedGame, graphics);
+		eventHandle(gameContainer, graphics);
 		
 		//PlayUI.showSunCollectedGrid(gc, sbg, g);
 		//PlayUI.showPlantZoneGrid(gc, sbg, g);
 		//PlayUI.showSeedZoneGrid(gc, sbg, g);
 		//PlayUI.showSunCollected(gc, sbg, g);
 		
-		drawAllPlants(plant,  gc.isPaused());
-		drawAllZombie(zombie, gc.isPaused());
-		drawAllBullet(bullet, gc.isPaused());
+		drawAllPlants(plant,  gameContainer.isPaused());
+		drawAllZombie(zombie, gameContainer.isPaused());
+		drawAllBullet(bullet, gameContainer.isPaused());
 		
-		SunUI. render(gc, sbg, g);
-		SeedUI.render(gc, sbg, g);
+		SunUI. render(gameContainer, stateBasedGame, graphics);
+		SeedUI.render(gameContainer, stateBasedGame, graphics);
 		
-		PlayUI.showSunCollected (gc, sbg, g);
-		PlayUI.showPauseButton  (gc, g);
-		//PlayUI.showSpeedUpButton(gc, g);
-		PlayUI.showExitGameButton(gc, g);
-		PlayUI.showPlayButton   (gc, g);
-		PlayUI.showShovel       (gc, g);
-		
+		PlayUI.showSunCollected (gameContainer, stateBasedGame, graphics);
+		PlayUI.showPauseButton  (gameContainer, graphics);
+		//PlayUI.showSpeedUpButton(gameContainer, graphics);
+		PlayUI.showExitGameButton(gameContainer, graphics);
+		PlayUI.showPlayButton   (gameContainer, graphics);
+		PlayUI.showShovel       (gameContainer, graphics);
+		PlayUI.showChili(gameContainer, graphics);
+		if (Position.isInteractChili(zomb, chili)){
+			PlayUI.burn(zombie,chili);
+		};
+
 		if (SeedUI.getPickedImg() != null)
 			SeedUI.getPickedImg().drawCentered(Controller.getMouseX(), Controller.getMouseY());
 			
 		//DebugTool.showMousePosition(g);	
 	}
 	
-	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
-		if (! gc.isPaused() ) {
-			SunUI.update(gc, sbg);
+	public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int delta) throws SlickException {
+		if (! gameContainer.isPaused() ) {
+			SunUI.update(gameContainer, stateBasedGame);
 			
 			for (int i=0; i<5; i++)
 				for (int j=0; j<9; j++) {
@@ -122,7 +145,7 @@ public class Play extends BasicGameState {
 				}
 				zombie.get(i).move(); //move zombie
 				zombie.get(i).attack(plant, bullet);
-				toGameOver(sbg, zombie.get(i).getPos().x);
+				toGameOver(stateBasedGame, zombie.get(i).getPos().x);
 			}
 			if ((int)((10.0f/timePass) * 4000000f) > 100) {
 				spawnRandZombie((int)((10.0f/timePass) * 4000000f));

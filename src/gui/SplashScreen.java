@@ -29,13 +29,13 @@ public class SplashScreen extends BasicGameState {
 	private float edgeY;
 	private float width;
 	private float height;
-	SSound sSound = new SSound("res/Sound/sound/Intro.ogg");
+	private SSound sSound = new SSound("res/Sound/sound/Intro.ogg");
 	/**
 	 * Create splash screen
 	 * @param state	State index
 	 */
 	public SplashScreen(int state) {
-		sSound.play(true, 1f, 1f);
+		sSound.play(false, 1f, 1f);
 	}
 	
 	// Initialization

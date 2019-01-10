@@ -1,10 +1,14 @@
 package gui;
 
 import com.Controller;
+import com.Position;
 import org.lwjgl.input.Mouse;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.StateBasedGame;
+import pz.Zombie;
+import pz.plant.Chili;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -17,6 +21,7 @@ public class PlayUI {
 	private static Image pauseButton;
 	private static Image playButton;
 	private static Image exitGameButton;
+	private static Image Chili;
 	//private static Image speedUpButton;
 
 	private static Image shovel;
@@ -47,6 +52,10 @@ public class PlayUI {
 	private static float exitGameButtonWidth  = 120   * PZGUI.getResolutionRateWidth();
 	private static float exitGameButtonHeight = 60  * PZGUI.getResolutionRateHeight();
 
+	private static float chiliPosX   = 390 * PZGUI.getResolutionRateWidth();;
+	private static float chiliPosY   = 150 * PZGUI.getResolutionRateHeight();
+	private static float chiliWidth  = 40   * PZGUI.getResolutionRateWidth();
+	private static float chiliHeight  = 100  * PZGUI.getResolutionRateHeight();
 	//private static float speedUpButtonPosX   = 1460 * PZGUI.getResolutionRateWidth();
 	//private static float speedUpButtonPosY   = 10   * PZGUI.getResolutionRateHeight();
 	//private static float speedUpButtonWidth  = 60   * PZGUI.getResolutionRateWidth();
@@ -68,6 +77,7 @@ public class PlayUI {
 	public static float getSeedZoneH()      {return seedZoneH;}
 	public static void setShovelClicked(boolean isShovelClicked) {PlayUI.isShovelClicked = isShovelClicked;}
 
+	public static Image ChiliBurn ;
 	/**
 	 * Initialize images for PlayUI
 	 * @throws SlickException
@@ -78,7 +88,10 @@ public class PlayUI {
 	//	speedUpButton = new Image("res/UI/speedUp.png");
 		exitGameButton = new Image("res/UI/GOver_ExitGame_Button.png");
 		shovel 		  = new Image("res/UI/Shovel.png");
+		Chili = new Image("res/Plants/chili/Idle/fire0.png");
+		ChiliBurn = new Image("res/Plants/chili/Bullet/fire1.png");
 	}
+
 
 	/**
 	 * Draw SunCollected grid
@@ -149,6 +162,10 @@ public class PlayUI {
 		for (int i = 0; i < 5; i++)
 			for (int j = 0; j < 9; j++)
 				g.drawRect(plantZonePosX + cellW * j, plantZonePosY + cellH * i, cellW, cellH);
+	}
+
+	public static void showChili(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+
 	}
 
 	// Pause button
@@ -264,4 +281,21 @@ public class PlayUI {
 		}		
 	}
 
-}
+	public static void showChili(GameContainer gameContainer, Graphics graphics) {
+		for (int i = 0; i < 5; i++){
+			Chili.draw(chiliPosX, chiliPosY +cellH*i,chiliWidth,chiliHeight);
+		}
+	}
+
+	public static void burn(ArrayList<Zombie> z, Chili c) {
+		for (Zombie zomb : z) {
+			if (Position.isInteractChili(zomb, c)) {
+				for (int i = 0; i < 9; i++) {
+					ChiliBurn.draw(chiliPosX + i * cellW, chiliPosY);
+				}
+				zomb.setHp(0);
+
+			}
+
+		}
+	}}

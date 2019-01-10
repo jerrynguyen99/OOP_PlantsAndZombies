@@ -1,7 +1,11 @@
 package gui;
 
 import org.newdawn.slick.Animation;
-
+/**
+ *
+ * @author  Tran To Que Phuong
+ *
+ */
 public class AnimationItem {
 	
 	private Animation ani = new Animation();

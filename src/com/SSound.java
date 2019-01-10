@@ -5,7 +5,7 @@ import org.newdawn.slick.Sound;
 
 /**
  * 
- * @author Nguyen Phan Hung Thuan
+ * @author Nguyen Truong Dat
  *
  */
 public class SSound {
