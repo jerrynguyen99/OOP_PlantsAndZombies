@@ -13,10 +13,10 @@ import pz.Zombie;
 
 public class CrazyZombie extends Zombie {
 
-	private static int hp = 1500;
+	private static int hp = 300;
 	private static int damage = 10;
 	private static int attackInterval = 50;
-	private static float speed = 0.4f;
+	private static float speed = 0.33f;
 	
 	private Animation attackAni;
 	private Animation walkAni;

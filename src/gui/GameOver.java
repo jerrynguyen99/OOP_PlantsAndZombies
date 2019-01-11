@@ -31,9 +31,9 @@ public class GameOver extends BasicGameState {
 		showBackground(g);
 		showExitGameButton(gc, g);
 		showNewGameButton(sbg, g);
-		text.render(755 * PZGUI.getResolutionRateWidth(), 275 * PZGUI.getResolutionRateHeight(), SunUI.getSunCollected().toString());
+		text.render(755 * PZGUI.getResolutionRateWidth(), 275 * PZGUI.getResolutionRateHeight(), Play.zombieDead.toString());
 	}
-	
+
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
 		
 	}

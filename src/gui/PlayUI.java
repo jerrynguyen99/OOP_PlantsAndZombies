@@ -95,17 +95,17 @@ public class PlayUI {
 
 	/**
 	 * Draw SunCollected grid
-	 * @param gc GameContainer
-	 * @param sbg	StateBasedGame
-	 * @param g	Graphics
+	 * @param gameContainer GameContainer
+	 * @param stateBasedGame	StateBasedGame
+	 * @param graphics	Graphics
 	 * @throws SlickException
 	 */
-	public static void showSunCollectedGrid(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+	public static void showSunCollectedGrid(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
 		float posX = 10 * PZGUI.getResolutionRateWidth();
 		float posY = 20 * PZGUI.getResolutionRateHeight();
 		float W = 200 * PZGUI.getResolutionRateWidth();
 		float H = 45  * PZGUI.getResolutionRateHeight();
-		g.drawRect(posX, posY, W, H);
+		graphics.drawRect(posX, posY, W, H);
 	}
 
 	/**
@@ -260,7 +260,7 @@ public class PlayUI {
 	 * @param gc	GameContainer
 	 * @param g Graphics
 	 */
-	public static void showShovel(GameContainer gc, Graphics g) {
+	public static void showShovel(GameContainer gameContainer, Graphics graphics) {
 		shovel.draw(shovelButtonPosX, shovelButtonPosY, shovelButtonWidth, shovelButtonHeight);
 		if (Controller.mouseInArea(shovelButtonPosX, shovelButtonPosY, shovelButtonPosX + shovelButtonWidth, shovelButtonPosY + shovelButtonHeight)) {
 			shovel.draw(shovelButtonPosX, shovelButtonPosY, shovelButtonWidth, shovelButtonHeight, new Color(0, 0, 0, 100));
@@ -287,15 +287,14 @@ public class PlayUI {
 		}
 	}
 
-	public static void burn(ArrayList<Zombie> z, Chili c) {
-		for (Zombie zomb : z) {
-			if (Position.isInteractChili(zomb, c)) {
+	public static void burn(Zombie zombie, Chili chili) {
 				for (int i = 0; i < 9; i++) {
 					ChiliBurn.draw(chiliPosX + i * cellW, chiliPosY);
 				}
-				zomb.setHp(0);
+				zombie.setHp(0);
+//				chili.remove();
+	}
 
-			}
+}
 
-		}
-	}}
+

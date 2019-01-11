@@ -51,4 +51,6 @@ public class Chili extends Plant {
         public void attack(ArrayList<Bullet> bulletArrayList) {
 
         }
+
+
 }

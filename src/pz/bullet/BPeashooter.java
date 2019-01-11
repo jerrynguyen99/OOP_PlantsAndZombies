@@ -19,7 +19,7 @@ import pz.zombie.MaleZombie;
 public class BPeashooter extends pz.Bullet {
 	
 	private static int   damage 	= 10;
-	private static float speed		= 4f;
+	private static float speed		= 20f;
 	//private static Animation ani = new Animation();
 	
 	protected void loadAnimation() { 

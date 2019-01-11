@@ -33,7 +33,7 @@ public class Play extends BasicGameState {
 	private static Integer timePass = 1;
 	private SSound sSound = new SSound("res/sound/Modern_Day.ogg");
 	private static Image background;
-	
+	public static Integer zombieDead =0;
 	public Play(int state) {}
 
 	// Initialization
@@ -93,9 +93,20 @@ public class Play extends BasicGameState {
 		PlayUI.showPlayButton   (gameContainer, graphics);
 		PlayUI.showShovel       (gameContainer, graphics);
 		PlayUI.showChili(gameContainer, graphics);
-		if (Position.isInteractChili(zomb, chili)){
-			PlayUI.burn(zombie,chili);
-		};
+		try {
+			for (Zombie zomb : zombie) {
+				if (Position.isInteractChili(zomb, chili)) {
+					System.out.println("Hey you hit me!");
+					PlayUI.burn(zomb, chili);
+				}
+
+			}
+		} catch (NullPointerException e) {
+			System.out.println("Null Zombies");
+		}
+//		if (Position.isInteractChili(zomb, chili)){
+//			PlayUI.burn(zombie,chili);
+//		}
 
 		if (SeedUI.getPickedImg() != null)
 			SeedUI.getPickedImg().drawCentered(Controller.getMouseX(), Controller.getMouseY());
@@ -127,15 +138,17 @@ public class Play extends BasicGameState {
 				if (zombie.get(i) == null) continue;
 				if (zombie.get(i).getHp() <= 0) {
 					zombie.remove(i);
+					zombieDead++;
 					continue;
 				}
 				zombie.get(i).move(); //move zombie
 				zombie.get(i).attack(plant, bullet);
+
 				toGameOver(stateBasedGame, zombie.get(i).getPos().x);
 			}
-			if ((int)((10.0f/timePass) * 4000000f) > 100) {
-				spawnRandZombie((int)((10.0f/timePass) * 4000000f));
-				System.out.println((int)((10.0f/timePass) * 4000000f));
+			if ((int)((10.0f/timePass) * 40000000f) > 100) {
+				spawnRandZombie((int)((10.0f/timePass) * 40000000f));
+				System.out.println((int)((10.0f/timePass) * 40000000f));
 			}else {
 				spawnRandZombie(100);
 				System.out.println(100);
