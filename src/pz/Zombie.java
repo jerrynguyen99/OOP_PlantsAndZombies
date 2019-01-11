@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.Position;
 import gui.PZGUI;
+import pz.plant.Chili;
 
 
 public abstract class Zombie extends Character {
@@ -40,4 +41,5 @@ public abstract class Zombie extends Character {
 	}
 	
 	public abstract void attack(Plant[][] plant, ArrayList<Bullet> bulletList);
+	public abstract void attackChili(Chili plant, ArrayList<Bullet> bulletList);
 }

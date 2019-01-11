@@ -2,6 +2,7 @@ package pz.plant;
 
 import com.Position;
 import gui.AnimationLoader;
+import org.newdawn.slick.Image;
 import pz.Bullet;
 import pz.Plant;
 import pz.Zombie;
@@ -13,9 +14,20 @@ public class Chili extends Plant {
     private static int _damage = 10;
     private static int _attackInterval = 100;
     private static boolean _attackCooldown = false;
+    private Position pos;
 
     public Chili (Position pos) {
         super("Chili", _hp, _damage, _attackInterval, pos);
+    }
+
+    @Override
+    public void setPos(Position pos) {
+        this.pos=pos;
+    }
+
+    @Override
+    public Position getPos() {
+        return getPos();
     }
 
     @Override
@@ -44,6 +56,7 @@ public class Chili extends Plant {
 
     @Override
     public void move() {
+        setSpeed(20);
         setPos(getPos().x + getSpeed(), getPos().y);
     }
 
@@ -52,5 +65,8 @@ public class Chili extends Plant {
 
         }
 
-
+    public void drawChili (Image img){
+        setSpeed(20);
+        img.draw(this.getPos().x + getSpeed(), this.getPos().y);
+    }
 }

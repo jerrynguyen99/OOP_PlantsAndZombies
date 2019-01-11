@@ -25,6 +25,7 @@ public class PlayUI {
 	//private static Image speedUpButton;
 
 	private static Image shovel;
+	public static ArrayList<Chili> ChiliList;
 	
 	private static Text sunView = new Text(35.0f);
 	private static Text gamePausedText = new Text(70.0f);
@@ -282,14 +283,25 @@ public class PlayUI {
 	}
 
 	public static void showChili(GameContainer gameContainer, Graphics graphics) {
+		int j=0;
+		Chili c= new Chili(new Position(chiliPosX, chiliPosY));
 		for (int i = 0; i < 5; i++){
-			Chili.draw(chiliPosX, chiliPosY +cellH*i,chiliWidth,chiliHeight);
+
+			while( ChiliList.size() > -1 && ChiliList.size()<5) {
+				j++;
+				ChiliList.add(j,c);
+				c.setPos(new Position(chiliPosX, chiliPosY + cellH*i));
+				Chili.draw(chiliPosX, chiliPosY + cellH * i, chiliWidth, chiliHeight);
+			}
 		}
 	}
 
 	public static void burn(Zombie zombie, Chili chili) {
 				for (int i = 0; i < 9; i++) {
-					ChiliBurn.draw(chiliPosX + i * cellW, chiliPosY);
+
+					chili.drawChili(ChiliBurn);
+					chili.move();
+
 				}
 				zombie.setHp(0);
 //				chili.remove();

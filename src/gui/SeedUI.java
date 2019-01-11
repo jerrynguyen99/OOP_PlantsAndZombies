@@ -44,7 +44,7 @@ public class SeedUI {
 	 */
 	public SeedUI() 		   { seed.clear(); }
 	/**
-	 * Clear all existing seed in collection
+	  Clear all existing seed in collection
 	 */
 	public static void clear() { new SeedUI(); }
 	

@@ -7,9 +7,12 @@ import org.newdawn.slick.Animation;
 import com.Position;
 
 import gui.AnimationLoader;
+import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import pz.Bullet;
 import pz.Plant;
 import pz.Zombie;
+import pz.plant.Chili;
 
 public class CrazyZombie extends Zombie {
 
@@ -20,12 +23,14 @@ public class CrazyZombie extends Zombie {
 	
 	private Animation attackAni;
 	private Animation walkAni;
+	private Image ChiliBurn;
 
 	private static float scaleFactor = 1.3f;
-	public CrazyZombie(Position pos) {
+	public CrazyZombie(Position pos) throws SlickException {
 		super("MaleZombie", hp, damage, attackInterval, speed, pos, scaleFactor);
 		attackAni = AnimationLoader.getAnimationFromFolder("res/ZombieTest/CrazyZombie/attack", 110);
 		walkAni = getAnimation();
+		ChiliBurn = new Image("res/Plants/chili/Bullet/fire1.png");
 	}
 
 	@Override
@@ -67,4 +72,26 @@ public class CrazyZombie extends Zombie {
 		}
 	}
 
-}
+	@Override
+	public void attackChili(Chili plant, ArrayList<Bullet> bulletList) {
+		boolean hit = false;
+		if (plant != null) {
+					if (Position.isInteractChili(this, plant)) {
+						hit = true;
+
+						setAnimation(attackAni);
+						setScaleFactor(0.6f);
+						//System.out.println("touched");
+						if (getFramePassed() >= getAttackInterval()) {
+							plant.move();
+							plant.drawChili(ChiliBurn);
+							setFramePassed(0);
+						}
+						setFramePassed(getFramePassed()+1);
+						return;
+					}
+				}
+			}
+
+	}
+

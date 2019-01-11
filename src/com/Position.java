@@ -62,18 +62,17 @@ public class Position {
 	}
 
 	public static boolean isInteractChili(Zombie zombie, Chili chili) {
-		float topLeftX1 = zombie.getPos().x + zombie.getWidth()*0.33f;
-		float topLeftY1 = zombie.getPos().y;
-		@SuppressWarnings("unused")
-		float botRightX1 = topLeftX1 + zombie.getWidth();
-		float botRightY1 = topLeftY1 + zombie.getHeight();
-		float topLeftX2 = chili.getPos().x;
-		float topLeftY2 = chili.getPos().y;
-		float botRightX2 = topLeftX2 + chili.getWidth();
-		float botRightY2 = topLeftY2 + chili.getHeight();
+		float topLeftX1 = chili.getPos().x;
+		float topLeftY1 = chili.getPos().y;
+		float botRightX1 = topLeftX1 + chili.getWidth();
+		float botRightY1 = topLeftY1 + chili.getHeight();
+		float topLeftX2 = zombie.getPos().x;
+		float topLeftY2 = zombie.getPos().y;
+		float botRightX2 = topLeftX2 + zombie.getWidth();
+		float botRightY2 = topLeftY2 + zombie.getHeight();
 
-		return (topLeftX1 < botRightX2  && botRightX1 > botRightX2 &&
-				topLeftY1 < topLeftY2 && botRightY1 > botRightY2   );
+		return (topLeftX1 > topLeftX2 && topLeftY1 > topLeftY2   &&
+				botRightX1 < botRightX2 && botRightY1 < botRightY2   );
 	}
 
 }

@@ -18,6 +18,8 @@ import pz.zombie.MaleZombie;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
+import static gui.PlayUI.ChiliList;
+
 /**
  *
  * @author Nguyen Truong Dat + Tran To Que Phuong
@@ -27,7 +29,7 @@ public class Play extends BasicGameState {
 
 	private static ArrayList<Zombie> zombie 	= new ArrayList<Zombie>();	
 	private static Plant[][] 		  plant 	= new Plant[5][9];
-	private static Chili 			  chili;
+	private static Chili			  chili;
 	private static Zombie			  zomb;
 	private static ArrayList<Bullet> bullet 	= new ArrayList<Bullet>();
 	private static Integer timePass = 1;
@@ -95,9 +97,11 @@ public class Play extends BasicGameState {
 		PlayUI.showChili(gameContainer, graphics);
 		try {
 			for (Zombie zomb : zombie) {
-				if (Position.isInteractChili(zomb, chili)) {
-					System.out.println("Hey you hit me!");
-					PlayUI.burn(zomb, chili);
+				for (Chili chili: ChiliList) {
+					if (Position.isInteractChili(zomb, chili)) {
+						System.out.println("Hey you hit me!");
+						zomb.attackChili(chili, bullet);
+					}
 				}
 
 			}
@@ -146,6 +150,8 @@ public class Play extends BasicGameState {
 
 				toGameOver(stateBasedGame, zombie.get(i).getPos().x);
 			}
+
+
 			if ((int)((10.0f/timePass) * 40000000f) > 100) {
 				spawnRandZombie((int)((10.0f/timePass) * 40000000f));
 				System.out.println((int)((10.0f/timePass) * 40000000f));
