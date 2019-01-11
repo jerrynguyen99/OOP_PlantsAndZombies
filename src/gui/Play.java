@@ -1,6 +1,7 @@
 package gui;
 
 import com.Controller;
+import com.Position;
 import com.SSound;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
@@ -26,6 +27,8 @@ public class Play extends BasicGameState {
 
 	private static ArrayList<Zombie> zombie 	= new ArrayList<Zombie>();	
 	private static Plant[][] 		  plant 	= new Plant[5][9];
+	private static Chili 			  chili;
+	private static Zombie			  zomb;
 	private static ArrayList<Bullet> bullet 	= new ArrayList<Bullet>();
 	private static Integer timePass = 1;
 	private SSound sSound = new SSound("res/sound/Modern_Day.ogg");
@@ -89,7 +92,11 @@ public class Play extends BasicGameState {
 		PlayUI.showExitGameButton(gameContainer, graphics);
 		PlayUI.showPlayButton   (gameContainer, graphics);
 		PlayUI.showShovel       (gameContainer, graphics);
-		
+		PlayUI.showChili(gameContainer, graphics);
+		if (Position.isInteractChili(zomb, chili)){
+			PlayUI.burn(zombie,chili);
+		};
+
 		if (SeedUI.getPickedImg() != null)
 			SeedUI.getPickedImg().drawCentered(Controller.getMouseX(), Controller.getMouseY());
 			
