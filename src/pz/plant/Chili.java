@@ -9,25 +9,28 @@ import pz.Zombie;
 
 import java.util.ArrayList;
 
+/**
+ * @author Nguyen Truong Dat
+ */
 public class Chili extends Plant {
-    private static int _hp = 100;
-    private static int _damage = 10;
-    private static int _attackInterval = 100;
+    private static final int _hp = 100;
+    private static final int _damage = 10;
+    private static final int _attackInterval = 100;
     private static boolean _attackCooldown = false;
     private Position pos;
 
-    public Chili (Position pos) {
+    public Chili(Position pos) {
         super("Chili", _hp, _damage, _attackInterval, pos);
     }
 
     @Override
     public void setPos(Position pos) {
-        this.pos=pos;
+        this.pos = pos;
     }
 
     @Override
     public Position getPos() {
-        return getPos();
+        return this.pos;
     }
 
     @Override
@@ -61,11 +64,11 @@ public class Chili extends Plant {
     }
 
     @Override
-        public void attack(ArrayList<Bullet> bulletArrayList) {
+    public void attack(ArrayList<Bullet> bulletArrayList) {
 
-        }
+    }
 
-    public void drawChili (Image img){
+    public void drawChili(Image img) {
         setSpeed(20);
         img.draw(this.getPos().x + getSpeed(), this.getPos().y);
     }

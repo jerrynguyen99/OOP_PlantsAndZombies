@@ -1,133 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e6775d-09db-4768-a37b-61b0a1b40830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/nguye.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/nguye.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jars.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jars.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a4e6775d-09db-4768-a37b-61b0a1b40830" name="Default Changelist" comment="Change some animation, Modify Chili.java to access game, fix bug">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Jerry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ini4j_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pz/plant/Repeater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jars.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP_PlantsAndZombies.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP_PlantsAndZombies.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_PlantsAndZombies/META-INF/OOP_PlantsAndZombies.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Bullet/fire/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Bullet/fire/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Bullet/fire/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Bullet/fire/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Bullet/fire/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Bullet/normal/Pea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Plants/PeaShooter2/Idle/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Seed/Chili.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Seed/Chili.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Seed/Peashooter.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Seed/Peashooter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Seed/Peashooter2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Seed/Peashooter3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/other/Logo.ai" beforeDir="false" afterPath="$PROJECT_DIR$/res/other/Logo.ai" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/other/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/other/Logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Clickable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Clickable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/SSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/SSound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AnimationItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AnimationItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AnimationLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AnimationLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GameOver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/PZGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PZGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Play.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/PlayUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PlayUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Seed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Seed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SeedUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SeedUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SplashScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SunUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SunUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/CharacterBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/CharacterBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/CharacterI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/CharacterI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/DeadBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/DeadBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/Sun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/Sun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/Zombie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/bullet/BChili.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/bullet/BChili.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pz/bullet/BPeashooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/bullet/BPeashooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/bullet/BSunflower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/bullet/BSunflower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pz/plant/Chili.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/plant/Chili.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/plant/Peashooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/plant/Peashooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/plant/Peashooter2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/plant/Peashooter3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/plant/Peashooter3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/plant/Sunflower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/plant/Sunflower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/plant/Torchwood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/plant/Torchwood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/plant/Wallnut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/plant/Wallnut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/sun/SunNatural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/sun/SunNatural.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/sun/SunSunflower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/sun/SunSunflower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pz/zombie/CrazyZombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/zombie/CrazyZombie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pz/zombie/MaleZombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pz/zombie/MaleZombie.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/PlayUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="286" column="62" selection-start-line="286" selection-start-column="62" selection-end-line="286" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pz/CharacterBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/Play.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-              <folding>
-                <element signature="e#9911#9912#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pz/plant/Chili.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-              <folding>
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#613#614#0" expanded="true" />
-                <element signature="e#644#645#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/PZGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/SplashScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pz/Zombie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-              <folding>
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pz/zombie/CrazyZombie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pz/zombie/MaleZombie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="76" column="42" lean-forward="true" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Position.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -136,137 +136,49 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>HEAD</find>
-      <find>isint</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/gui/PZGUI.java" />
-        <option value="$PROJECT_DIR$/src/pz/zombie/NhiZombie.java" />
-        <option value="$PROJECT_DIR$/src/pz/zombie/FemaleZombie.java" />
-        <option value="$PROJECT_DIR$/src/gui/AnimationLoader.java" />
-        <option value="$PROJECT_DIR$/src/gui/Seed.java" />
-        <option value="$PROJECT_DIR$/src/pz/Bullet.java" />
-        <option value="$PROJECT_DIR$/src/pz/CharacterBuilder.java" />
-        <option value="$PROJECT_DIR$/src/pz/CharacterI.java" />
-        <option value="$PROJECT_DIR$/src/gui/GameOver.java" />
-        <option value="$PROJECT_DIR$/src/pz/bullet/BPeashooter.java" />
-        <option value="$PROJECT_DIR$/src/gui/SeedUI.java" />
-        <option value="$PROJECT_DIR$/src/com/Position.java" />
-        <option value="$PROJECT_DIR$/src/pz/Zombie.java" />
-        <option value="$PROJECT_DIR$/src/pz/zombie/CrazyZombie.java" />
-        <option value="$PROJECT_DIR$/src/pz/zombie/MaleZombie.java" />
-        <option value="$PROJECT_DIR$/src/gui/ChiliList.java" />
-        <option value="$PROJECT_DIR$/src/gui/Play.java" />
-        <option value="$PROJECT_DIR$/src/gui/PlayUI.java" />
-        <option value="$PROJECT_DIR$/src/pz/plant/Chili.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="100" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="820" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="OOP_PlantsAndZombie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PlantsAndZombie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PlantsAndZombie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PlantsAndZombie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PlantsAndZombie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PlantsAndZombie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PlantsAndZombie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PlantsAndZombie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PlantsAndZombie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PlantsAndZombie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pz" type="462c0819:PsiDirectoryNode" />
-              <item name="bullet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PlantsAndZombie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PlantsAndZombie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pz" type="462c0819:PsiDirectoryNode" />
-              <item name="plant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PlantsAndZombie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PlantsAndZombie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pz" type="462c0819:PsiDirectoryNode" />
-              <item name="zombie" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1qRCkdDUsdIRzOqoRsy8h7SJ7Jc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547213728131" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jars" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/ini4j-0.5.4" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24597701" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jerry\IdeaProjects\OOP_PlantsAndZombies\libs\lwjgl-assimp" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="gui" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
-    <configuration name="PZGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="PZGUI" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.PZGUI" />
       <module name="OOP_PlantsAndZombies" />
+      <option name="PROGRAM_PARAMETERS" value="--illegal-access=warn" />
       <option name="VM_PARAMETERS" value="-Djava.library.path=libs/" />
       <extension name="coverage">
         <pattern>
@@ -278,12 +190,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.PZGUI" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -299,381 +218,118 @@
       <workItem from="1547037630926" duration="12793000" />
       <workItem from="1547128171896" duration="822000" />
       <workItem from="1547204282177" duration="7658000" />
+      <workItem from="1617033164218" duration="11439000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31097000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33060557" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32569557" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="611" lean-forward="true" selection-start-line="611" selection-end-line="611" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/jars/slick.jar!/org/newdawn/slick/Animation.class" />
-    <entry file="file://$USER_HOME$/Downloads/MaleZombie.java" />
-    <entry file="file://$PROJECT_DIR$/src/pz/zombie/NhiZombie.java" />
-    <entry file="file://$PROJECT_DIR$/src/pz/zombie/FemaleZombie.java" />
-    <entry file="file://$PROJECT_DIR$/src/gui/Seed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/DeadBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/Sun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Clickable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/SSound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/AnimationItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/AnimationLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2564">
-          <caret line="560" column="23" selection-start-line="560" selection-start-column="23" selection-end-line="560" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/CharacterI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-604">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/sun/SunNatural.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/sun/SunSunflower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-628">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-834">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/GameOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/plant/Torchwood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/SeedUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/Plant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/bullet/BPeashooter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/PZGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/SplashScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/CharacterBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/Zombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/zombie/CrazyZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/zombie/MaleZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="76" column="42" lean-forward="true" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/ChiliList.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Play.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-          <folding>
-            <element signature="e#9911#9912#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/PlayUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="286" column="62" selection-start-line="286" selection-start-column="62" selection-end-line="286" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pz/plant/Chili.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.24597701" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>OOP_PlantsAndZombies</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.24597701" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>jars</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.24597701" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change some animation, Modify Chili.java to access game, fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change some animation, Modify Chili.java to access game, fix bug" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="395" y="91" key="#Inspections" timestamp="1617039048195">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1617039048195" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1617034195223">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617034195223" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617036876836">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1617036876836" />
+    <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617042205389">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1617042205389" />
+    <state x="551" y="307" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617041810758">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="551" y="307" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1617041810758" />
+    <state x="480" y="123" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1617042703770">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="480" y="123" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1617042703770" />
+    <state x="592" y="283" key="DetectedRootsChooserDialog" timestamp="1617034726415">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="592" y="283" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1617034726415" />
+    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1617034924945">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617034924945" />
+    <state width="1493" height="282" key="GridCell.Tab.0.bottom" timestamp="1617044634140">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617044634140" />
+    <state width="1493" height="282" key="GridCell.Tab.0.center" timestamp="1617044634140">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="282" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617044634140" />
+    <state width="1493" height="282" key="GridCell.Tab.0.left" timestamp="1617044634140">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="282" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617044634140" />
+    <state width="1493" height="282" key="GridCell.Tab.0.right" timestamp="1617044634140">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="282" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617044634140" />
+    <state width="1493" height="329" key="GridCell.Tab.1.bottom" timestamp="1617040018835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617040018835" />
+    <state width="1493" height="329" key="GridCell.Tab.1.center" timestamp="1617040018835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617040018835" />
+    <state width="1493" height="329" key="GridCell.Tab.1.left" timestamp="1617040018835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617040018835" />
+    <state width="1493" height="329" key="GridCell.Tab.1.right" timestamp="1617040018835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617040018835" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1617034928014">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617034928014" />
+    <state x="315" y="148" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1617042347446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="315" y="148" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1617042347446" />
+    <state x="716" y="217" width="538" height="472" key="extract.method.dialog" timestamp="1617041139069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="716" y="217" width="538" height="472" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1617041139069" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1617035279703">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617035279703" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,35 +1,33 @@
 package pz.plant;
 
-import java.util.ArrayList;
-
 import com.Position;
-
 import gui.AnimationLoader;
-
 import pz.Bullet;
 
+import java.util.ArrayList;
+
 public class Wallnut extends pz.Plant {
-	
-	private static int hp = 2000;
-	private static int attackInterval = 0;
 
-	public Wallnut(Position pos) {
-		super("Wallnut", hp, 0, attackInterval, pos);
-	}
+    private static int hp = 2000;
+    private static int attackInterval = 0;
 
-	@Override
-	public void attack(ArrayList<Bullet> bulletList) {
-		
-	}
+    public Wallnut(Position pos) {
+        super("Wallnut", hp, 0, attackInterval, pos);
+    }
 
-	@Override
-	public void move() {
-		
-	}
+    @Override
+    public void attack(ArrayList<Bullet> bulletList) {
 
-	@Override
-	protected void loadAnimation() {
-		setAnimation(AnimationLoader.getAnimationFromFolder("res/Plants/WallNut/Idle2", 100));
-	}
+    }
+
+    @Override
+    public void move() {
+
+    }
+
+    @Override
+    protected void loadAnimation() {
+        setAnimation(AnimationLoader.getAnimationFromFolder("res/Plants/WallNut/Idle2", 100));
+    }
 
 }

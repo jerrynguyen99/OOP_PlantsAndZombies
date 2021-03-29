@@ -14,301 +14,305 @@ import pz.plant.*;
 import pz.zombie.CrazyZombie;
 import pz.zombie.MaleZombie;
 
-
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static gui.PlayUI.ChiliList;
 
 /**
- *
  * @author Nguyen Truong Dat + Tran To Que Phuong
- *
  */
 public class Play extends BasicGameState {
 
-	private static ArrayList<Zombie> zombie 	= new ArrayList<Zombie>();	
-	private static Plant[][] 		  plant 	= new Plant[5][9];
-	private static Chili			  chili;
-	private static Zombie			  zomb;
-	private static ArrayList<Bullet> bullet 	= new ArrayList<Bullet>();
-	private static Integer timePass = 1;
-	private SSound sSound = new SSound("res/sound/Modern_Day.ogg");
-	private static Image background;
-	public static Integer zombieDead =0;
-	public Play(int state) {}
+    private static ArrayList<Zombie> zombie = new ArrayList<Zombie>();
+    private static Plant[][] plant = new Plant[5][9];
+    private static Chili chili;
+    private static Zombie zomb;
+    private static ArrayList<Bullet> bullet = new ArrayList<Bullet>();
+    private static Integer timePass = 1;
+    private SSound sSound = new SSound("res/sound/Modern_Day.ogg");
+    private static Image background;
+    public static Integer zombieDead = 0;
 
-	// Initialization
-	public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
-		new AnimationLoader();
-		background = new Image("res/Map/Map_2.png");
-		sSound.play(true, 1f, 1f);
-		SunUI.init();
-		PlayUI.init();
-		
-		SeedUI.addSeed(Sunflower.class, 50);
-		SeedUI.addSeed(Peashooter.class, 100);
-		SeedUI.addSeed(Peashooter2.class, 200);
-		SeedUI.addSeed(Wallnut.class, 50);
-		SeedUI.addSeed(Torchwood.class, 150);
-//		SeedUI.addSeed(Bloomerang.class, 250);
-	}
+    public Play(int state) {
+    }
 
-	/**
-	 * Draw default background
-	 * @param gameContainer	GameContainer
-	 * @param stateBasedGame	StateBasedGame
-	 * @param graphics	Graphics
-	 * @throws SlickException	SlickException
-	 */
-	public void showBackground(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
-		float rate 		= 1.37f;
-		float width 	= background.getWidth() * PZGUI.getResolutionRateWidth() * rate;
-		float height 	= background.getHeight() * PZGUI.getResolutionRateHeight() * rate;
-		float moveLeft  = (float)PZGUI.getWidth() * (6.35f/32);
-		float moveUp 	= (float)PZGUI.getHeight() * (30f/180);
-		
-		background.draw(-moveLeft, -moveUp, width, height);
-	}
+    // Initialization
+    public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
+        new AnimationLoader();
+        background = new Image("res/Map/Map_2.png");
+        sSound.play(true, 1f, 1f);
+        SunUI.init();
+        PlayUI.init();
 
-	// Render
-	public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
-		showBackground(gameContainer, stateBasedGame, graphics);
-		eventHandle(gameContainer, graphics);
-		
-		//PlayUI.showSunCollectedGrid(gc, sbg, g);
-		//PlayUI.showPlantZoneGrid(gc, sbg, g);
-		//PlayUI.showSeedZoneGrid(gc, sbg, g);
-		//PlayUI.showSunCollected(gc, sbg, g);
-		
-		drawAllPlants(plant,  gameContainer.isPaused());
-		drawAllZombie(zombie, gameContainer.isPaused());
-		drawAllBullet(bullet, gameContainer.isPaused());
-		
-		SunUI. render(gameContainer, stateBasedGame, graphics);
-		SeedUI.render(gameContainer, stateBasedGame, graphics);
-		
-		PlayUI.showSunCollected (gameContainer, stateBasedGame, graphics);
-		PlayUI.showPauseButton  (gameContainer, graphics);
-		//PlayUI.showSpeedUpButton(gameContainer, graphics);
-		PlayUI.showExitGameButton(gameContainer, graphics);
-		PlayUI.showPlayButton   (gameContainer, graphics);
-		PlayUI.showShovel       (gameContainer, graphics);
-		PlayUI.showChili(gameContainer, graphics);
-		try {
-			for (Zombie zomb : zombie) {
-				for (Chili chili: ChiliList) {
-					if (Position.isInteractChili(zomb, chili)) {
-						System.out.println("Hey you hit me!");
-						zomb.attackChili(chili, bullet);
-					}
-				}
+        SeedUI.addSeed(Sunflower.class, 50);
+        SeedUI.addSeed(Peashooter.class, 100);
+        SeedUI.addSeed(Repeater.class, 200);
+        SeedUI.addSeed(Wallnut.class, 50);
+        SeedUI.addSeed(Torchwood.class, 150);
+		SeedUI.addSeed(Chili.class, 250);
+    }
 
-			}
-		} catch (NullPointerException e) {
-			System.out.println("Null Zombies");
-		}
+    /**
+     * Draw default background
+     *
+     * @param gameContainer  GameContainer
+     * @param stateBasedGame StateBasedGame
+     * @param graphics       Graphics
+     * @throws SlickException SlickException
+     */
+    public void showBackground(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
+        float rate = 1.37f;
+        float width = background.getWidth() * PZGUI.getResolutionRateWidth() * rate;
+        float height = background.getHeight() * PZGUI.getResolutionRateHeight() * rate;
+        float moveLeft = (float) PZGUI.getWidth() * (6.35f / 32);
+        float moveUp = (float) PZGUI.getHeight() * (30f / 180);
+
+        background.draw(-moveLeft, -moveUp, width, height);
+    }
+
+    // Render
+    public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
+        showBackground(gameContainer, stateBasedGame, graphics);
+        eventHandle(gameContainer, graphics);
+
+        //PlayUI.showSunCollectedGrid(gc, sbg, g);
+        //PlayUI.showPlantZoneGrid(gc, sbg, g);
+        //PlayUI.showSeedZoneGrid(gc, sbg, g);
+        //PlayUI.showSunCollected(gc, sbg, g);
+
+        drawAllPlants(plant, gameContainer.isPaused());
+        drawAllZombie(zombie, gameContainer.isPaused());
+        drawAllBullet(bullet, gameContainer.isPaused());
+
+        SunUI.render(gameContainer, stateBasedGame, graphics);
+        SeedUI.render(gameContainer, stateBasedGame, graphics);
+
+        PlayUI.showSunCollected(gameContainer, stateBasedGame, graphics);
+        PlayUI.showPauseButton(gameContainer, graphics);
+        //PlayUI.showSpeedUpButton(gameContainer, graphics);
+        PlayUI.showExitGameButton(gameContainer, graphics);
+        PlayUI.showPlayButton(gameContainer, graphics);
+        PlayUI.showShovel(gameContainer, graphics);
+        PlayUI.showChili(gameContainer, graphics);
+        try {
+            for (Zombie zomb : zombie) {
+                for (Chili chili : ChiliList) {
+                    if (Position.isInteractChili(zomb, chili)) {
+                        System.out.println("Hey you hit me!");
+                        zomb.attackChili(chili, bullet);
+                    }
+                }
+
+            }
+        } catch (NullPointerException e) {
+            System.out.println("Null Zombies");
+        }
 //		if (Position.isInteractChili(zomb, chili)){
 //			PlayUI.burn(zombie,chili);
 //		}
 
-		if (SeedUI.getPickedImg() != null)
-			SeedUI.getPickedImg().drawCentered(Controller.getMouseX(), Controller.getMouseY());
-			
-		//DebugTool.showMousePosition(g);	
-	}
-	
-	public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int delta) throws SlickException {
-		if (! gameContainer.isPaused() ) {
-			SunUI.update(gameContainer, stateBasedGame);
-			
-			for (int i=0; i<5; i++)
-				for (int j=0; j<9; j++) {
-					if (plant[i][j] != null) {
-						if (plant[i][j].getHp() <= 0) {
-							plant[i][j] = null;
-							continue;
-						}
-						plant[i][j].attack(bullet);
-					}
-				}
-			
-			for (int i=0; i<bullet.size(); i++) {
-				bullet.get(i).move();
-				bullet.get(i).attack(zombie, bullet);				
-			}
-			
-			for (int i=0; i < zombie.size(); i++) {
-				if (zombie.get(i) == null) continue;
-				if (zombie.get(i).getHp() <= 0) {
-					zombie.remove(i);
-					zombieDead++;
-					continue;
-				}
-				zombie.get(i).move(); //move zombie
-				zombie.get(i).attack(plant, bullet);
+        if (SeedUI.getPickedImg() != null)
+            SeedUI.getPickedImg().drawCentered(Controller.getMouseX(), Controller.getMouseY());
 
-				toGameOver(stateBasedGame, zombie.get(i).getPos().x);
-			}
+        //DebugTool.showMousePosition(g);
+    }
 
+    public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int delta) throws SlickException {
+        if (!gameContainer.isPaused()) {
+            SunUI.update(gameContainer, stateBasedGame);
 
-			if ((int)((10.0f/timePass) * 40000000f) > 100) {
-				spawnRandZombie((int)((10.0f/timePass) * 40000000f));
-				System.out.println((int)((10.0f/timePass) * 40000000f));
-			}else {
-				spawnRandZombie(100);
-				System.out.println(100);
-			}
-			timePass += delta;
-		}	
-	}	
-	
-	/**
-	 * Draw all plants
-	 * @param isPausing
-	 */
-	private static void drawAllPlants(Plant[][] plantList, boolean isPausing) {
-		for (Plant[] iPlantRow : plantList) {
-			for (Plant iPlant : iPlantRow) {
-				if (iPlant != null) {
-					iPlant.draw( !isPausing );
-				}		
-			}
-		}
-	}
-	
-	private static void drawAllZombie(ArrayList<Zombie> zombieList, boolean isPausing) {
-		for (Zombie iZombie : zombieList) {
-			iZombie.draw( !isPausing );
-		}
-	}
-	
-	private static void drawAllBullet (ArrayList<Bullet> bulletList, boolean isPausing) throws SlickException {
-		for (Bullet iBullet : bulletList) {
-			iBullet.draw( !isPausing );
-		}
-	}
-	
-	/**
-	 * Handle events need drawing
-	 * @param gc	GameContainer
-	 * @param g	Graphics
-	 */
-	private void eventHandle(GameContainer gc, Graphics g) {
-		int mouseX = Controller.getMouseX();
-		int mouseY = Controller.getMouseY();
-		
-		// Mouse on PlantZone
-		if (Controller.mouseInArea( PlayUI.getPlantZonePosX(), PlayUI.getPlantZonePosY(), 
-				PlayUI.getPlantZonePosX()+9*PlayUI.getCellW(), PlayUI.getPlantZonePosY()+5*PlayUI.getCellH())) {
-			
-			int hozId = (int) ( (mouseX - PlayUI.getPlantZonePosX()) / PlayUI.getCellW() ) ;
-			int verId = (int) ( (mouseY - PlayUI.getPlantZonePosY()) / PlayUI.getCellH() ) ;
+            for (int i = 0; i < 5; i++)
+                for (int j = 0; j < 9; j++) {
+                    if (plant[i][j] != null) {
+                        if (plant[i][j].getHp() <= 0) {
+                            plant[i][j] = null;
+                            continue;
+                        }
+                        plant[i][j].attack(bullet);
+                    }
+                }
 
-			if (SeedUI.getPickedClass() != null || PlayUI.isShovelClicked())
-				drawPlantZoneCoordinates(hozId, verId, g);
-		}
-		
-		// Mouse on SeedZone
-		int seedItemId = getSeedZoneItemId(mouseX, mouseY);	
-		if (seedItemId > -1 && seedItemId < SeedUI.getSeedCount())
-		{
-			g.setAntiAlias(true);
-			g.setLineWidth(5f);
-			g.drawRoundRect(PlayUI.getSeedZonePosX(), PlayUI.getSeedZonePosY()+ seedItemId*PlayUI.getSeedZoneH(), 
-			 			    PlayUI.getSeedZoneW(), PlayUI.getSeedZoneH(), 5);
-			g.resetLineWidth();
-		}
-		
-	}
+            for (int i = 0; i < bullet.size(); i++) {
+                bullet.get(i).move();
+                bullet.get(i).attack(zombie, bullet);
+            }
+
+            for (int i = 0; i < zombie.size(); i++) {
+                if (zombie.get(i) == null) continue;
+                if (zombie.get(i).getHp() <= 0) {
+                    zombie.remove(i);
+                    zombieDead++;
+                    continue;
+                }
+                zombie.get(i).move(); //move zombie
+                zombie.get(i).attack(plant, bullet);
+
+                toGameOver(stateBasedGame, zombie.get(i).getPos().x);
+            }
 
 
-	/**
-	 * Mouse clicked event, sponsored by Slick2D engine
-	 */
-	@Override
-	public void mouseClicked(int button, int x, int y, int clickCount) {
-		if (Controller.mouseInArea( PlayUI.getSeedZonePosX(), PlayUI.getSeedZonePosY(), 
-				PlayUI.getSeedZonePosX()+PlayUI.getSeedZoneW(), PlayUI.getSeedZonePosY()+PlayUI.getSeedZoneH()*8)) {
-			int itemId = (int) ( (y - PlayUI.getSeedZonePosY()) / PlayUI.getSeedZoneH() ) ;
-			SeedUI.onItemClicked(itemId);
-		}
-		
-		if (Controller.mouseInArea( PlayUI.getPlantZonePosX(), PlayUI.getPlantZonePosY(), 
-				PlayUI.getPlantZonePosX()+9*PlayUI.getCellW(), PlayUI.getPlantZonePosY()+5*PlayUI.getCellH())) {
-			int hozId = (int) ( (x - PlayUI.getPlantZonePosX()) / PlayUI.getCellW() ) ;
-			int verId = (int) ( (y - PlayUI.getPlantZonePosY()) / PlayUI.getCellH() ) ;
+            if ((int) ((10.0f / timePass) * 40000000f) > 100) {
+                spawnRandZombie((int) ((10.0f / timePass) * 40000000f));
+                System.out.println((int) ((10.0f / timePass) * 40000000f));
+            } else {
+                spawnRandZombie(100);
+                System.out.println(100);
+            }
+            timePass += delta;
+        }
+    }
 
-			if (plant[verId][hozId] == null && SeedUI.getPickedClass() != null) {
-				plant[verId][hozId] = CharacterBuilder.buildPlant(SeedUI.getPickedClass(), verId, hozId);
-				SeedUI.bought(); //had bought
-			}
-			
-			if (plant[verId][hozId] != null && PlayUI.isShovelClicked() == true) { 
-				plant[verId][hozId] = null;
-				PlayUI.setShovelClicked(false);
-			}
-		}
-		
-	}
-	
-	/**
-	 * Spawn zombie randomly
-	 * @param coefficient	Random factor, spawn zombie with ratio 5/delta
-	 */
-	private void spawnRandZombie(int coefficient) {
-		int row = ThreadLocalRandom.current().nextInt(0, coefficient);
-		int zombieN;
-		@SuppressWarnings("rawtypes")
-		Class[] zombieClass = { MaleZombie.class, CrazyZombie.class};
-		if (row>=0 && row<=4) {
-			zombieN = ThreadLocalRandom.current().nextInt(0, zombieClass.length);
-			zombie.add(CharacterBuilder.buildZombie(zombieClass[zombieN], row));
-		}
-	}
-	
-	/**
-	 * Draw 2 white lines indicating mouse cooordinates on PlantZone
-	 * @param hozId	Horizontal index
-	 * @param verId	Vertical index
-	 * @param g	Graphics
-	 */
-	private void drawPlantZoneCoordinates(int hozId, int verId, Graphics g) {
-		g.setColor(new Color(1, 1, 1, 0.15f));
-		g.fillRect(PlayUI.getPlantZonePosX(), PlayUI.getPlantZonePosY() + verId*PlayUI.getCellH(), 9*PlayUI.getCellW(), PlayUI.getCellH());
-		g.fillRect(PlayUI.getPlantZonePosX() + hozId*PlayUI.getCellW(), PlayUI.getPlantZonePosY(), PlayUI.getCellW(), 5*PlayUI.getCellH());
-	}
-	
-	/**
-	 * If the cursor inside SeedZone return item index else return -1
-	 * @param mouseX	X Mouse position
-	 * @param mouseY	Y Mouse position
-	 * @return	Seed index or -1 if outside seedzone
-	 */
-	private static int getSeedZoneItemId(float mouseX, float mouseY) {
-		if (Controller.mouseInArea( PlayUI.getSeedZonePosX(), PlayUI.getSeedZonePosY(), 
-			PlayUI.getSeedZonePosX()+PlayUI.getSeedZoneW(), PlayUI.getSeedZonePosY()+PlayUI.getSeedZoneH()*8))
-			return (int) ( (mouseY - PlayUI.getSeedZonePosY()) / PlayUI.getSeedZoneH() );
-		return -1; //outside SeedZone
-	}
+    /**
+     * Draw all plants
+     *
+     * @param isPausing
+     */
+    private static void drawAllPlants(Plant[][] plantList, boolean isPausing) {
+        for (Plant[] iPlantRow : plantList) {
+            for (Plant iPlant : iPlantRow) {
+                if (iPlant != null) {
+                    iPlant.draw(!isPausing);
+                }
+            }
+        }
+    }
+
+    private static void drawAllZombie(ArrayList<Zombie> zombieList, boolean isPausing) {
+        for (Zombie iZombie : zombieList) {
+            iZombie.draw(!isPausing);
+        }
+    }
+
+    private static void drawAllBullet(ArrayList<Bullet> bulletList, boolean isPausing) throws SlickException {
+        for (Bullet iBullet : bulletList) {
+            iBullet.draw(!isPausing);
+        }
+    }
+
+    /**
+     * Handle events need drawing
+     *
+     * @param gc GameContainer
+     * @param g  Graphics
+     */
+    private void eventHandle(GameContainer gc, Graphics g) {
+        int mouseX = Controller.getMouseX();
+        int mouseY = Controller.getMouseY();
+
+        // Mouse on PlantZone
+        if (Controller.mouseInArea(PlayUI.getPlantZonePosX(), PlayUI.getPlantZonePosY(),
+                PlayUI.getPlantZonePosX() + 9 * PlayUI.getCellW(), PlayUI.getPlantZonePosY() + 5 * PlayUI.getCellH())) {
+
+            int hozId = (int) ((mouseX - PlayUI.getPlantZonePosX()) / PlayUI.getCellW());
+            int verId = (int) ((mouseY - PlayUI.getPlantZonePosY()) / PlayUI.getCellH());
+
+            if (SeedUI.getPickedClass() != null || PlayUI.isShovelClicked())
+                drawPlantZoneCoordinates(hozId, verId, g);
+        }
+
+        // Mouse on SeedZone
+        int seedItemId = getSeedZoneItemId(mouseX, mouseY);
+        if (seedItemId > -1 && seedItemId < SeedUI.getSeedCount()) {
+            g.setAntiAlias(true);
+            g.setLineWidth(5f);
+            g.drawRoundRect(PlayUI.getSeedZonePosX(), PlayUI.getSeedZonePosY() + seedItemId * PlayUI.getSeedZoneH(),
+                    PlayUI.getSeedZoneW(), PlayUI.getSeedZoneH(), 5);
+            g.resetLineWidth();
+        }
+
+    }
 
 
-	private void toGameOver(StateBasedGame sbg, float x) {
+    /**
+     * Mouse clicked event, sponsored by Slick2D engine
+     */
+    @Override
+    public void mouseClicked(int button, int x, int y, int clickCount) {
+        if (Controller.mouseInArea(PlayUI.getSeedZonePosX(), PlayUI.getSeedZonePosY(),
+                PlayUI.getSeedZonePosX() + PlayUI.getSeedZoneW(), PlayUI.getSeedZonePosY() + PlayUI.getSeedZoneH() * 8)) {
+            int itemId = (int) ((y - PlayUI.getSeedZonePosY()) / PlayUI.getSeedZoneH());
+            SeedUI.onItemClicked(itemId);
+        }
 
-		if (x < 130 * PZGUI.getResolutionRateWidth()) {
-			zombie.clear();
-			bullet.clear();
-			for (int i=0; i<5; i++)
-				for (int j=0; j<9; j++) {
-					plant[i][j] = null;
-				}
-			
-			sbg.getState(3);
-			sbg.enterState(3);
-		}
-	}
-	
-	public int getID() {
-		return 2;
-	}
+        if (Controller.mouseInArea(PlayUI.getPlantZonePosX(), PlayUI.getPlantZonePosY(),
+                PlayUI.getPlantZonePosX() + 9 * PlayUI.getCellW(), PlayUI.getPlantZonePosY() + 5 * PlayUI.getCellH())) {
+            int hozId = (int) ((x - PlayUI.getPlantZonePosX()) / PlayUI.getCellW());
+            int verId = (int) ((y - PlayUI.getPlantZonePosY()) / PlayUI.getCellH());
+
+            if (plant[verId][hozId] == null && SeedUI.getPickedClass() != null) {
+                plant[verId][hozId] = CharacterBuilder.buildPlant(SeedUI.getPickedClass(), verId, hozId);
+                SeedUI.bought(); //had bought
+            }
+
+            if (plant[verId][hozId] != null && PlayUI.isShovelClicked() == true) {
+                plant[verId][hozId] = null;
+                PlayUI.setShovelClicked(false);
+            }
+        }
+
+    }
+
+    /**
+     * Spawn zombie randomly
+     *
+     * @param coefficient Random factor, spawn zombie with ratio 5/delta
+     */
+    private void spawnRandZombie(int coefficient) {
+        int row = ThreadLocalRandom.current().nextInt(0, coefficient);
+        int zombieN;
+        @SuppressWarnings("rawtypes")
+        Class[] zombieClass = {MaleZombie.class, CrazyZombie.class};
+        if (row >= 0 && row <= 4) {
+            zombieN = ThreadLocalRandom.current().nextInt(0, zombieClass.length);
+            zombie.add(CharacterBuilder.buildZombie(zombieClass[zombieN], row));
+        }
+    }
+
+    /**
+     * Draw 2 white lines indicating mouse cooordinates on PlantZone
+     *
+     * @param hozId Horizontal index
+     * @param verId Vertical index
+     * @param g     Graphics
+     */
+    private void drawPlantZoneCoordinates(int hozId, int verId, Graphics g) {
+        g.setColor(new Color(1, 1, 1, 0.15f));
+        g.fillRect(PlayUI.getPlantZonePosX(), PlayUI.getPlantZonePosY() + verId * PlayUI.getCellH(), 9 * PlayUI.getCellW(), PlayUI.getCellH());
+        g.fillRect(PlayUI.getPlantZonePosX() + hozId * PlayUI.getCellW(), PlayUI.getPlantZonePosY(), PlayUI.getCellW(), 5 * PlayUI.getCellH());
+    }
+
+    /**
+     * If the cursor inside SeedZone return item index else return -1
+     *
+     * @param mouseX X Mouse position
+     * @param mouseY Y Mouse position
+     * @return Seed index or -1 if outside seedzone
+     */
+    private static int getSeedZoneItemId(float mouseX, float mouseY) {
+        if (Controller.mouseInArea(PlayUI.getSeedZonePosX(), PlayUI.getSeedZonePosY(),
+                PlayUI.getSeedZonePosX() + PlayUI.getSeedZoneW(), PlayUI.getSeedZonePosY() + PlayUI.getSeedZoneH() * 8))
+            return (int) ((mouseY - PlayUI.getSeedZonePosY()) / PlayUI.getSeedZoneH());
+        return -1; //outside SeedZone
+    }
+
+
+    private void toGameOver(StateBasedGame sbg, float x) {
+
+        if (x < 130 * PZGUI.getResolutionRateWidth()) {
+            zombie.clear();
+            bullet.clear();
+            for (int i = 0; i < 5; i++)
+                for (int j = 0; j < 9; j++) {
+                    plant[i][j] = null;
+                }
+
+            sbg.getState(3);
+            sbg.enterState(3);
+        }
+    }
+
+    public int getID() {
+        return 2;
+    }
 }

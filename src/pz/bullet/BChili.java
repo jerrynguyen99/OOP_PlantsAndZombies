@@ -5,13 +5,15 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import pz.Bullet;
 import pz.Zombie;
-import pz.zombie.MaleZombie;
 
 import java.util.ArrayList;
 
+/**
+ * @author Nguyen Truong Dat
+ */
 public class BChili extends pz.Bullet {
-    private static int   damage 	= 10;
-    private static float speed		= 4f;
+    private static int damage = 1000;
+    private static float speed = 4f;
     //private static Animation ani = new Animation();
 
     protected void loadAnimation() {
