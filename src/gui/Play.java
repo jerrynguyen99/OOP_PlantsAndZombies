@@ -3,6 +3,7 @@ package gui;
 import com.Controller;
 import com.Position;
 import com.SSound;
+import org.lwjgl.Sys;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
@@ -24,15 +25,15 @@ import static gui.PlayUI.ChiliList;
  */
 public class Play extends BasicGameState {
 
-    private static ArrayList<Zombie> zombie = new ArrayList<Zombie>();
-    private static Plant[][] plant = new Plant[5][9];
-    private static Chili chili;
-    private static Zombie zomb;
-    private static ArrayList<Bullet> bullet = new ArrayList<Bullet>();
+    private static final ArrayList<Zombie> zombie = new ArrayList<Zombie>();
+    private static final Plant[][] plant = new Plant[5][9];
+    private static final ArrayList<Bullet> bullet = new ArrayList<Bullet>();
     private static Integer timePass = 1;
-    private SSound sSound = new SSound("res/sound/Modern_Day.ogg");
+    private final SSound sSound = new SSound("res/sound/Modern_Day.ogg");
     private static Image background;
     public static Integer zombieDead = 0;
+    public static final float timeSpawn = 10000f;
+    public static final int spawnCoefficient = 10000;
 
     public Play(int state) {
     }
@@ -50,7 +51,7 @@ public class Play extends BasicGameState {
         SeedUI.addSeed(Repeater.class, 200);
         SeedUI.addSeed(Wallnut.class, 50);
         SeedUI.addSeed(Torchwood.class, 150);
-		SeedUI.addSeed(Chili.class, 250);
+		SeedUI.addSeed(Chili.class, 0);
     }
 
     /**
@@ -90,28 +91,11 @@ public class Play extends BasicGameState {
 
         PlayUI.showSunCollected(gameContainer, stateBasedGame, graphics);
         PlayUI.showPauseButton(gameContainer, graphics);
-        //PlayUI.showSpeedUpButton(gameContainer, graphics);
+        PlayUI.showSpeedUpButton(gameContainer, graphics);
         PlayUI.showExitGameButton(gameContainer, graphics);
         PlayUI.showPlayButton(gameContainer, graphics);
         PlayUI.showShovel(gameContainer, graphics);
         PlayUI.showChili(gameContainer, graphics);
-        try {
-            for (Zombie zomb : zombie) {
-                for (Chili chili : ChiliList) {
-                    if (Position.isInteractChili(zomb, chili)) {
-                        System.out.println("Hey you hit me!");
-                        zomb.attackChili(chili, bullet);
-                    }
-                }
-
-            }
-        } catch (NullPointerException e) {
-            System.out.println("Null Zombies");
-        }
-//		if (Position.isInteractChili(zomb, chili)){
-//			PlayUI.burn(zombie,chili);
-//		}
-
         if (SeedUI.getPickedImg() != null)
             SeedUI.getPickedImg().drawCentered(Controller.getMouseX(), Controller.getMouseY());
 
@@ -129,7 +113,12 @@ public class Play extends BasicGameState {
                             plant[i][j] = null;
                             continue;
                         }
-                        plant[i][j].attack(bullet);
+                        if (plant[i][j].getName()!="Chili"){
+                            plant[i][j].attack(bullet);
+                        } else {
+                            plant[i][j].attackChili(bullet,zombie);
+                        }
+
                     }
                 }
 
@@ -152,12 +141,12 @@ public class Play extends BasicGameState {
             }
 
 
-            if ((int) ((10.0f / timePass) * 40000000f) > 100) {
-                spawnRandZombie((int) ((10.0f / timePass) * 40000000f));
-                System.out.println((int) ((10.0f / timePass) * 40000000f));
+            if ((int) ((10.0f / timePass) * timeSpawn) > 100) {
+                spawnRandZombie((int) ((10.0f / timePass) * timeSpawn));
+//                System.out.println((int) ((10.0f / timePass) * timeSpawn));
             } else {
-                spawnRandZombie(100);
-                System.out.println(100);
+                spawnRandZombie(spawnCoefficient);
+//                System.out.println(spawnCoefficient);
             }
             timePass += delta;
         }

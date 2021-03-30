@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public abstract class Plant extends Character {
 
-    private float scaleFactor = 0.2f;
+    private final float scaleFactor = 0.2f;
     //===========================
 
     /**
@@ -44,4 +44,6 @@ public abstract class Plant extends Character {
     }
 
     public abstract void attack(ArrayList<Bullet> bulletArrayList);
+
+    public abstract void attackChili(ArrayList<Bullet> bulletArrayList, ArrayList<Zombie> zombies);
 }

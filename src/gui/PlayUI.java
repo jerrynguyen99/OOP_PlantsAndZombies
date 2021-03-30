@@ -28,7 +28,7 @@ public class PlayUI {
     private static final Text sunView = new Text(35.0f);
     private static final Text gamePausedText = new Text(70.0f);
 
-    private static boolean isSpeedUpClicked = false;
+    private static boolean isSpeedUpClicked = true;
     private static boolean isShovelClicked = false;
 
     private static final float plantZonePosX = 432 * PZGUI.getResolutionRateWidth();
@@ -41,7 +41,7 @@ public class PlayUI {
     private static final float seedZoneW = 140 * PZGUI.getResolutionRateWidth();
     private static final float seedZoneH = 90 * PZGUI.getResolutionRateHeight();
 
-    private static final float pauseButtonPosX = 1400 * PZGUI.getResolutionRateWidth();
+    private static final float pauseButtonPosX = 1390 * PZGUI.getResolutionRateWidth();
     private static final float pauseButtonPosY = 10 * PZGUI.getResolutionRateHeight();
     private static final float pauseButtonWidth = 60 * PZGUI.getResolutionRateWidth();
     private static final float pauseButtonHeight = 60 * PZGUI.getResolutionRateHeight();
@@ -55,7 +55,7 @@ public class PlayUI {
     private static final float chiliPosY = 150 * PZGUI.getResolutionRateHeight();
     private static final float chiliWidth = 40 * PZGUI.getResolutionRateWidth();
     private static final float chiliHeight = 100 * PZGUI.getResolutionRateHeight();
-    private static final float speedUpButtonPosX   = 1460 * PZGUI.getResolutionRateWidth();
+    private static final float speedUpButtonPosX   = 1320 * PZGUI.getResolutionRateWidth();
     private static final float speedUpButtonPosY   = 10   * PZGUI.getResolutionRateHeight();
     private static final float speedUpButtonWidth  = 60   * PZGUI.getResolutionRateWidth();
     private static final float speedUpButtonHeight = 60   * PZGUI.getResolutionRateHeight();
@@ -110,7 +110,7 @@ public class PlayUI {
     /**
      * Initialize images for PlayUI
      *
-     * @throws SlickException
+     * @throws SlickException Throw SlickException
      */
     public static void init() throws SlickException {
         pauseButton = new Image("res/UI/pause.png");
@@ -118,8 +118,8 @@ public class PlayUI {
         speedUpButton = new Image("res/UI/speedUp.png");
         exitGameButton = new Image("res/UI/GOver_ExitGame_Button.png");
         shovel = new Image("res/UI/Shovel.png");
-        Chili = new Image("res/Plants/chili/Idle/fire0.png");
-        ChiliBurn = new Image("res/Plants/chili/Bullet/fire1.png");
+        Chili = new Image("res/Plants/chili/Idle/Jalapeno.png");
+        ChiliBurn = new Image("res/Plants/chili/Bullet/1.png");
     }
 
 
@@ -129,7 +129,7 @@ public class PlayUI {
      * @param gameContainer  GameContainer
      * @param stateBasedGame StateBasedGame
      * @param graphics       Graphics
-     * @throws SlickException
+     * @throws SlickException Throw SlickException
      */
     public static void showSunCollectedGrid(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
         float posX = 10 * PZGUI.getResolutionRateWidth();
@@ -145,7 +145,7 @@ public class PlayUI {
      * @param gameContainer  GameContainer
      * @param stateBasedGame StateBasedGame
      * @param graphics   Graphics
-     * @throws SlickException
+     * @throws SlickException Throw SlickException
      */
     public static void showSunCollected(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
         float iconPosX = 10 * PZGUI.getResolutionRateWidth();
@@ -177,7 +177,7 @@ public class PlayUI {
      * @param gc  GameContainer
      * @param sbg StatedBaseGame
      * @param g   Graphics
-     * @throws SlickException
+     * @throws SlickException Throw SlickException
      */
     public static void showSeedZoneGrid(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         for (int i = 0; i < 8; i++)
@@ -200,10 +200,6 @@ public class PlayUI {
                 g.drawRect(plantZonePosX + cellW * j, plantZonePosY + cellH * i, cellW, cellH);
     }
 
-    public static void showChili(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-
-    }
-
     // Pause button
 
     /**
@@ -211,7 +207,7 @@ public class PlayUI {
      *
      * @param gc GameContainer
      * @param g  Graphics
-     * @throws SlickException
+     * @throws SlickException Throw SlickException
      */
     public static void showPauseButton(GameContainer gc, Graphics g) throws SlickException {
         pauseButton.draw(pauseButtonPosX, pauseButtonPosY, pauseButtonWidth, pauseButtonHeight);
@@ -231,6 +227,15 @@ public class PlayUI {
         }
     }
 
+    // ExitGame button
+
+    /**
+     * Draw ExitGame button
+     *
+     * @param gc GameContainer
+     * @param g  Graphics
+     * @throws SlickException Throw SlickException
+     */
     public static void showExitGameButton(GameContainer gc, Graphics g) throws SlickException {
 
         exitGameButtonHandler(gc, exitGameButton, exitGameButtonPosX, exitGameButtonPosY, exitGameButtonWidth, exitGameButtonHeight);
@@ -251,6 +256,7 @@ public class PlayUI {
             }
         }
     }
+
     // Speed Up button
     /**
      * Show speedUp button
@@ -266,8 +272,8 @@ public class PlayUI {
     		speedUpButton.draw(speedUpButtonPosX, speedUpButtonPosY, speedUpButtonWidth, speedUpButtonHeight,
     							new Color(0, 0, 0, 50));
     		if (Mouse.getEventButtonState() && Mouse.getEventButton() == 0) {
-    			gc.setTargetFrameRate(isSpeedUpClicked==false?180:60);
-    			gc.setVSync(isSpeedUpClicked);
+    			gc.setTargetFrameRate(isSpeedUpClicked?180:60);
+    			gc.setVSync(!isSpeedUpClicked);
     			isSpeedUpClicked = !isSpeedUpClicked;
     			try {
     				TimeUnit.MILLISECONDS.sleep(100);

@@ -119,9 +119,7 @@ public class AnimationLoader {
         String[] dirs = f.list(new FilenameFilter() {
             @Override
             public boolean accept(File dir, String name) {
-                if (getFileExtension(name).equals(extension.toLowerCase()))
-                    return true;
-                return false;
+                return getFileExtension(name).equals(extension.toLowerCase());
             }
         });
         return dirs;

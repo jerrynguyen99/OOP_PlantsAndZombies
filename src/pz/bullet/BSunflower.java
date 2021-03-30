@@ -16,10 +16,11 @@ public class BSunflower extends Bullet implements Clickable {
 
     private float x;
     private float y;
-    private float initX, initY;
-    private static int damage = 0;
-    private static int speed = 10;
-    private static int height = 40;
+    private final float initX;
+    private final float initY;
+    private static final int damage = 0;
+    private static final int speed = 10;
+    private static final int height = 40;
 
     public BSunflower(Position pos) {
         super(damage, speed, pos);

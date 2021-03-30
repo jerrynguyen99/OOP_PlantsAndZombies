@@ -16,7 +16,7 @@ public abstract class Bullet {
     private Animation ani = new Animation();
     private float speed = 0;
     private Position pos;
-    private static float scaleFactor = 0.6f;
+    private static final float scaleFactor = 0.6f;
 
     /**
      * Construct bullet

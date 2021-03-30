@@ -42,8 +42,8 @@ public class Chili extends Plant {
     public void attackChili(ArrayList<Bullet> bulletArrayList, ArrayList<Zombie> zombies) {
         for (Zombie z : zombies) {
 //		if (getFramePassed() > getAttackInterval()) {
-            if (Position.isInteract(z, this) && _attackCooldown == false) {
-                bulletArrayList.add(new pz.bullet.BPeashooter((getPos().x + getWidth() * 0.8f),
+            if (!_attackCooldown) {
+                bulletArrayList.add(new pz.bullet.BChili((getPos().x + getWidth() * 0.8f),
                         (getPos().y + getHeight() * 0.15f),
                         getDamage()));
                 setFramePassed(0);
@@ -65,7 +65,6 @@ public class Chili extends Plant {
 
     @Override
     public void attack(ArrayList<Bullet> bulletArrayList) {
-
     }
 
     public void drawChili(Image img) {

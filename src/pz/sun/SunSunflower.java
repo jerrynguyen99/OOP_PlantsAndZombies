@@ -8,9 +8,10 @@ public class SunSunflower extends Sun {
 
     private float x;
     private float y = 0;
-    private float initX, initY;
-    private static float speed = 0.1f;
-    private static float height = 40f;
+    private final float initX;
+    private final float initY;
+    private static final float speed = 0.1f;
+    private static final float height = 40f;
 
     public SunSunflower(Animation ani, float posX, float posY) throws SlickException {
         super(ani, posX, posY, 0);

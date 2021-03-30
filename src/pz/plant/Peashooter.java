@@ -3,6 +3,7 @@ package pz.plant;
 import com.Position;
 import gui.AnimationLoader;
 import pz.Bullet;
+import pz.Zombie;
 
 import java.util.ArrayList;
 
@@ -11,9 +12,9 @@ import java.util.ArrayList;
  */
 public class Peashooter extends pz.Plant {
 
-    private static int _hp = 100;
-    private static int _damage = 10;
-    private static int _attackInterval = 100;
+    private static final int _hp = 100;
+    private static final int _damage = 10;
+    private static final int _attackInterval = 100;
     private static boolean _attackCooldown = false;
 
     public Peashooter(Position pos) {
@@ -40,6 +41,11 @@ public class Peashooter extends pz.Plant {
             _attackCooldown = false;
         }
         setFramePassed(getFramePassed() + 1);
+    }
+
+    @Override
+    public void attackChili(ArrayList<Bullet> bulletArrayList, ArrayList<Zombie> zombies) {
+
     }
 
     @Override

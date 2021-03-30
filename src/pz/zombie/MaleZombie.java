@@ -14,21 +14,21 @@ import java.util.ArrayList;
 
 public class MaleZombie extends Zombie {
 
-    private static int hp = 200;
-    private static int damage = 50;
-    private static int attackInterval = 100;
-    private static float speed = 0.4f;
+    private static final int hp = 200;
+    private static final int damage = 20;
+    private static final int attackInterval = 50;
+    private static final float speed = 0.4f;
 
-    private Animation walkAni;
-    private Animation attackAni;
-    private static float scaleFactor = 1.3f;
-    private Image ChiliBurn;
+    private final Animation walkAni;
+    private final Animation attackAni;
+    private static final float scaleFactor = 1.3f;
+    private final Image ChiliBurn;
 
     public MaleZombie(Position pos) throws SlickException {
         super("MaleZombie", hp, damage, attackInterval, speed, pos, scaleFactor);
         walkAni = getAnimation();
         attackAni = AnimationLoader.getAnimationFromFolder("res/ZombieTest/MaleZombie/attack", 110);
-        ChiliBurn = new Image("res/Plants/chili/Bullet/fire1.png");
+        ChiliBurn = new Image("res/Plants/chili/Bullet/1.png");
 
     }
 

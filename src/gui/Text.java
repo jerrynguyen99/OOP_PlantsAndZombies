@@ -13,8 +13,8 @@ import java.io.InputStream;
  */
 public class Text {
 
-    private static String fontDir = "res/Fonts/FbUsv8C5eI.ttf";
-    private static boolean antiAlias = true;
+    private static final String fontDir = "res/Fonts/FbUsv8C5eI.ttf";
+    private static final boolean antiAlias = true;
     private InputStream inputStream = null;
     private Font awtFont = new Font("Times New Roman", Font.BOLD, 24);
     private TrueTypeFont font = new TrueTypeFont(awtFont, antiAlias);

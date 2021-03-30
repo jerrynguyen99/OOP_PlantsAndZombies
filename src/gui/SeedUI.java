@@ -18,9 +18,9 @@ public class SeedUI {
 
     private static float x, y, w, h;
     private static int itemPrice;
-    private static Text cost = new Text(41.0f);
+    private static final Text cost = new Text(41.0f);
 
-    private static ArrayList<Seed> seed = new ArrayList<>();
+    private static final ArrayList<Seed> seed = new ArrayList<>();
     //private static boolean picked = false;
     @SuppressWarnings({"rawtypes"})
     private static Class pickedClass = null;
@@ -118,7 +118,7 @@ public class SeedUI {
      * @param itemIdx Item index, 0 to maximum 7
      */
     public static void onItemClicked(int itemIdx) {
-        if (itemIdx > seed.size()) return;
+        if (itemIdx > seed.size()-1) return;
         if (seed.get(itemIdx).getPrice() <= SunUI.getSunCollected()) { //having enough money
             itemPrice = seed.get(itemIdx).getPrice();
             pickedClass = seed.get(itemIdx).get_class();

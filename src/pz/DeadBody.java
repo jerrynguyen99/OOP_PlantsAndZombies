@@ -6,8 +6,8 @@ import org.newdawn.slick.Animation;
 
 public class DeadBody {
 
-    private Animation ani = new Animation();
-    private Position pos;
+    private final Animation ani = new Animation();
+    private final Position pos;
 
     public DeadBody(Class _class, Position pos) {
         this.pos = pos;

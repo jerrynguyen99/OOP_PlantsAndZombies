@@ -22,7 +22,7 @@ public class SplashScreen extends BasicGameState {
     private float edgeY;
     private float width;
     private float height;
-    private SSound sSound = new SSound("res/Sound/sound/Intro.ogg");
+    private final SSound sSound = new SSound("res/Sound/sound/Intro.ogg");
 
     /**
      * Create splash screen

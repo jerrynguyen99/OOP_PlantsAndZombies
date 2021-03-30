@@ -14,22 +14,22 @@ import java.util.ArrayList;
 
 public class CrazyZombie extends Zombie {
 
-    private static int hp = 300;
-    private static int damage = 10;
-    private static int attackInterval = 50;
-    private static float speed = 0.33f;
+    private static final int hp = 300;
+    private static final int damage = 10;
+    private static final int attackInterval = 50;
+    private static final float speed = 0.33f;
 
-    private Animation attackAni;
-    private Animation walkAni;
-    private Image ChiliBurn;
+    private final Animation attackAni;
+    private final Animation walkAni;
+    private final Image ChiliBurn;
 
-    private static float scaleFactor = 1.3f;
+    private static final float scaleFactor = 1.3f;
 
     public CrazyZombie(Position pos) throws SlickException {
-        super("MaleZombie", hp, damage, attackInterval, speed, pos, scaleFactor);
+        super("CrazyZombie", hp, damage, attackInterval, speed, pos, scaleFactor);
         attackAni = AnimationLoader.getAnimationFromFolder("res/ZombieTest/CrazyZombie/attack", 110);
         walkAni = getAnimation();
-        ChiliBurn = new Image("res/Plants/chili/Bullet/fire1.png");
+        ChiliBurn = new Image("res/Plants/chili/Bullet/1.png");
     }
 
     @Override
@@ -64,7 +64,7 @@ public class CrazyZombie extends Zombie {
                 }
             }
         }
-        if (hit == false) {
+        if (!hit) {
             setScaleFactor(1.3f);
             setAnimation(walkAni);
             setSpeed(speed);

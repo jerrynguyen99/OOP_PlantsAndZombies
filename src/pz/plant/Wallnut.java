@@ -3,13 +3,14 @@ package pz.plant;
 import com.Position;
 import gui.AnimationLoader;
 import pz.Bullet;
+import pz.Zombie;
 
 import java.util.ArrayList;
 
 public class Wallnut extends pz.Plant {
 
-    private static int hp = 2000;
-    private static int attackInterval = 0;
+    private static final int hp = 2000;
+    private static final int attackInterval = 0;
 
     public Wallnut(Position pos) {
         super("Wallnut", hp, 0, attackInterval, pos);
@@ -17,6 +18,11 @@ public class Wallnut extends pz.Plant {
 
     @Override
     public void attack(ArrayList<Bullet> bulletList) {
+
+    }
+
+    @Override
+    public void attackChili(ArrayList<Bullet> bulletArrayList, ArrayList<Zombie> zombies) {
 
     }
 

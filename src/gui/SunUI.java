@@ -13,8 +13,8 @@ import java.util.Timer;
  */
 public class SunUI {
 
-    private static int animationDuration = 200;
-    private static ArrayList<Sun> sunManager = new ArrayList<>();
+    private static final int animationDuration = 200;
+    private static final ArrayList<Sun> sunManager = new ArrayList<>();
     private static Integer sunCollected = 50;
     static Image sunIcon;
     static Animation sunAni = new Animation();

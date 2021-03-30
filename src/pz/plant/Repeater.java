@@ -3,14 +3,15 @@ package pz.plant;
 import com.Position;
 import gui.AnimationLoader;
 import pz.Bullet;
+import pz.Zombie;
 
 import java.util.ArrayList;
 
 public class Repeater extends pz.Plant {
 
-    private static int _hp = 100;
-    private static int _damage = 10;
-    private static int _attackInterval = 100;
+    private static final int _hp = 100;
+    private static final int _damage = 10;
+    private static final int _attackInterval = 100;
     private static boolean _attackCoolDown = false;
 
     public Repeater(Position pos) {
@@ -35,6 +36,11 @@ public class Repeater extends pz.Plant {
                 (getAnimation().getFrame() >= 0 && getAnimation().getFrame() <= 15)) {
             _attackCoolDown = false;
         }
+
+    }
+
+    @Override
+    public void attackChili(ArrayList<Bullet> bulletArrayList, ArrayList<Zombie> zombies) {
 
     }
 

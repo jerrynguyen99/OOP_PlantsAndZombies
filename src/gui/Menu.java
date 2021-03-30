@@ -18,8 +18,8 @@ public class Menu extends BasicGameState {
     }
 
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
-        background = new Image("res/Mode.png");
-        button = new Image("res/StarAdventurebutton.png");
+        background = new Image("res/other/Mode.png");
+        button = new Image("res/other/StarAdventurebutton.png");
     }
 
     public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {

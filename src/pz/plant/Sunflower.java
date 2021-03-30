@@ -5,14 +5,15 @@ import gui.AnimationLoader;
 import gui.SunUI;
 import org.newdawn.slick.SlickException;
 import pz.Bullet;
+import pz.Zombie;
 import pz.sun.SunSunflower;
 
 import java.util.ArrayList;
 
 public class Sunflower extends pz.Plant {
 
-    private static int hp = 100;
-    private static int attackInterval = 500;
+    private static final int hp = 100;
+    private static final int attackInterval = 500;
 
     public Sunflower(Position pos) {
         super("Sunflower", hp, 0, attackInterval, pos);
@@ -32,6 +33,11 @@ public class Sunflower extends pz.Plant {
             setFramePassed(0);
         }
         setFramePassed(getFramePassed() + 1);
+    }
+
+    @Override
+    public void attackChili(ArrayList<Bullet> bulletArrayList, ArrayList<Zombie> zombies) {
+
     }
 
     @Override

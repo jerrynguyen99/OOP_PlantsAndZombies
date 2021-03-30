@@ -12,13 +12,15 @@ import java.util.ArrayList;
  * @author Nguyen Truong Dat
  */
 public class BChili extends pz.Bullet {
-    private static int damage = 1000;
-    private static float speed = 4f;
+    private static final int damage = 1000;
+    private static final float speed = 4f;
     //private static Animation ani = new Animation();
 
     protected void loadAnimation() {
         try {
-            getAnimation().addFrame(new Image("res/Plants/chili/Bullet"), 10);
+            for (int i = 1; i<=14; i++){
+                getAnimation().addFrame(new Image("res/Plants/chili/Bullet/" + i + ".png").getScaledCopy(0.01f), 10);
+            }
         } catch (SlickException e) {
             e.printStackTrace();
         }

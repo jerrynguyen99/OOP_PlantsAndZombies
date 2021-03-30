@@ -4,15 +4,16 @@ import com.Position;
 import gui.AnimationLoader;
 import pz.Bullet;
 import pz.Plant;
+import pz.Zombie;
 import pz.bullet.BPeashooter;
 
 import java.util.ArrayList;
 
 public class Torchwood extends Plant {
 
-    private static int hp = 200;
-    private static int damage = 10;
-    private static int attackInterval = 0;
+    private static final int hp = 200;
+    private static final int damage = 10;
+    private static final int attackInterval = 0;
 
     public Torchwood(Position pos) {
         super("Torchwood", hp, damage, attackInterval, pos);
@@ -36,10 +37,13 @@ public class Torchwood extends Plant {
     }
 
     @Override
-    public void move() {
+    public void attackChili(ArrayList<Bullet> bulletArrayList, ArrayList<Zombie> zombies) {
+
     }
 
-    ;
+    @Override
+    public void move() {
+    }
 
     @Override
     protected void loadAnimation() {
